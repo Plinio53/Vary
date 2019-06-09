@@ -1,16 +1,5 @@
 const Discord = require("discord.js");
-const ms = require("ms");
 const fs = require("fs")
-const moment = require("moment")
-const os = require('os')
-const snekfetch = require('snekfetch');
-const ytdl = require('ytdl-core');
-const cpuStat = require("cpu-stat")
-const tempo = require('weather-js');
-const jimp = require('jimp');
-const math = require('mathjs');
-moment.locale('pt-BR');
-require("moment-duration-format")
 const vary = new Discord.Client({
   disableEveryone: true,
   autoReconnect: true
