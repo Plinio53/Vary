@@ -23,6 +23,7 @@
     "discord.js": "discordjs/discord.js#11.5-dev",
     "canvas": "2.5.0",
     "ffmpeg": "0.0.4",
+    "jimp": "0.6.4",
     "mathjs": "5.4.0",
     "moment": "2.22.2",
     "moment-duration-format": "2.2.2",
