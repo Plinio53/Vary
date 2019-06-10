@@ -20,6 +20,7 @@ module.exports = async (vary) => {
       function setStatus() {
           let randomStatus = status[Math.floor(Math.random() * status.length)];
           vary.user.setPresence({game: randomStatus});
+          vary.user.setStatus('online')
       }
 
       setStatus();
