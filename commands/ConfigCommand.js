@@ -61,7 +61,7 @@ exports.run = (vary, message, args) => {
             } else {
                 message.channel.send(new Discord.RichEmbed()
                     .addField(`Comandos`, '`v;config contador`, `v;config welcome`, `v;config leave`')
-                    .addFiled(`Módulos`, `
+                    .addField(`Módulos`, `
                     ${servidor.Contador ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     ${servidor.Welcome ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     ${servidor.Leave ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
