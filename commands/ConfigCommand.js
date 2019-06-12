@@ -44,7 +44,7 @@ exports.run = (vary, message, args) => {
                     servidor.Welcome = true;
                     servidor.WelcomeChannel = channel.id;
                     servidor.save();
-                    message.channel.send(`Entrada e saída setado em: ${channel}`);
+                    message.channel.send(`Chat de Entrada setado em: ${channel}`);
                 } else {
                     message.channel.send('Qual será o canal?')
                 }
@@ -54,7 +54,7 @@ exports.run = (vary, message, args) => {
                     servidor.Leave = true;
                     servidor.LeaveChannel = channel.id;
                     servidor.save();
-                    message.channel.send(`Entrada e saída setado em: ${channel}`);
+                    message.channel.send(`Chat de saída setado em: ${channel}`);
                 } else {
                     message.channel.send('Qual será o canal?')
                 }
@@ -62,9 +62,9 @@ exports.run = (vary, message, args) => {
                 message.channel.send(new Discord.RichEmbed()
                     .addField(`Comandos`, '`v;config contador`, `v;config welcome`, `v;config leave`')
                     .addField(`Módulos`, `
-                    ${servidor.Contador ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    ${servidor.Welcome ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    ${servidor.Leave ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
+                    Contador: ${servidor.Contador ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
+                    Mensagens de boas-vindas: ${servidor.Welcome ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
+                    Mensagens de saída: ${servidor.Leave ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     `)
                 );
             }
