@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const database = require("../database.js")
+const database = require("../config/database.js")
 
 function slots(_números) {
     _números = _números.toString();
@@ -21,7 +21,7 @@ function slots(_números) {
     return texto;
 }
 
-module.exports = async (vary, member) => {
+module.exports.run = async (vary, member) => {
 
     const memberavatar = member.user.avatarURL
 
@@ -30,7 +30,7 @@ module.exports = async (vary, member) => {
     .setThumbnail(memberavatar)
     .setTitle('**Adeus!**')
     .setDescription(`😢 **${member}** saiu do servidor!`)
-    .addField('<a:BlobCry:574968840174174247> | Agora temos:', member.guild.memberCount, 'membros!')
+    .addField('Agora temos', member.guild.memberCount)
     .setTimestamp()
 
          database.Guilds.findOne({ _id: member.guild.id }, function (error, servidor) {
