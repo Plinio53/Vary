@@ -34,8 +34,8 @@ fs.readdir("./events/", (err, files) => {
   jsfile.forEach(f => {
     const eventName = f.split('.')[0]
     const event = require(`./events/${f}`)
+    vary.on(eventName, event.bind(null, vary))
 
-vary.on(eventName, (...args) => event.run(vary, ...args))
   });
 
   vary.on('error', (err) => {
