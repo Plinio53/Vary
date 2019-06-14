@@ -21,7 +21,7 @@ function slots(_números) {
     return texto;
 }
 
-module.exports.run = async (vary, member) => {
+module.exports = async (vary, member) => {
 
     const memberavatar = member.user.avatarURL
 
