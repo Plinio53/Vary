@@ -50,6 +50,19 @@ module.exports = async (vary, member) => {
                     servidor.WelcomeChannel = 'Nenhum',
                     servidor.save()
                 }
+          if (servidor.autorole) {
+                    if (member.guild.roles.get(servidor.autoroleid)) {
+                        member.guild.members.get(member.id).addRole(servidor.autoroleid).catch(err => {
+                            servidor.autorole = false
+                            servidor.autoroleid = 'Nenhum'
+                            servidor.save()
+                      })
+                    } else {
+                        servidor.autorole = false
+                        servidor.autoroleid = 'Nenhum'
+                        servidor.save()
+                    }
+                }
             } else {}
         } else {}
     });
