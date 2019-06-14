@@ -30,7 +30,7 @@ module.exports.run = async (vary, member) => {
     .setThumbnail(memberavatar)
     .setTitle('**Adeus!**')
     .setDescription(`😢 **${member}** saiu do servidor!`)
-    .addField('Agora temos', member.guild.memberCount)
+    .addField('<a:BlobCry:574968840174174247> | Agora temos:', member.guild.memberCount, 'membros!')
     .setTimestamp()
 
          database.Guilds.findOne({ _id: member.guild.id }, function (error, servidor) {
