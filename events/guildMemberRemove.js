@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const database = require("../database.js")
+const database = require("../config/database.js")
 
 function slots(_números) {
     _números = _números.toString();
@@ -21,7 +21,7 @@ function slots(_números) {
     return texto;
 }
 
-module.exports = async (vary, member) => {
+module.exports.run = async (vary, member) => {
 
     const memberavatar = member.user.avatarURL
 

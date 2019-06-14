@@ -25,13 +25,15 @@ const Guilds = new Schema({
 _id: String,
 Lang: {type: String, default: "pt-BR"},
 Welcome: {type: Boolean, default: false},
-WelcomeChannel: {type: String, default: "🚪│entrada"},
+WelcomeChannel: {type: String, default: "Nenhum"},
 Leave: {type: Boolean, default: false},
-LeaveChannel: {type: String, default: "🚪│entrada"},
+LeaveChannel: {type: String, default: "Nenhum"},
 Partner: {type: Boolean, default: false},
 Principal: {type: Boolean, default: false},
 Contador: {type: Boolean, default: false},
-ChatContador: {type: String, default: 'Nenhum'}
+ChatContador: {type: String, default: 'Nenhum'},
+AutoRole: {type: Boolean, default: false},
+AutoRoleID: {type: String, default: "Nenhum"},
 })
 
 var UsersDB = mongoose.model('Users', Users);
