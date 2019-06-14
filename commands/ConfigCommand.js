@@ -78,7 +78,7 @@ exports.run = (vary, message, args) => {
                 WelcomeChannel: 'Nenhum',
                 Leave: false,
                 AutoRole: false,
-                AutoRoleID: false,
+                AutoRoleID: 'Nenhum',
                 LeaveChannel: 'Nenhum'
             });
             servidor.save();
