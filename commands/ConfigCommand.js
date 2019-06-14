@@ -65,6 +65,7 @@ exports.run = (vary, message, args) => {
                     Contador: ${servidor.Contador ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     Mensagens de boas-vindas: ${servidor.Welcome ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     Mensagens de saída: ${servidor.Leave ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
+                    Cargop automático: ${servidor.AutoRole ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
                     `)
                 );
             }
@@ -76,6 +77,8 @@ exports.run = (vary, message, args) => {
                 Welcome: false,
                 WelcomeChannel: 'Nenhum',
                 Leave: false,
+                AutoRole: false,
+                AutoRoleID: false,
                 LeaveChannel: 'Nenhum'
             });
             servidor.save();
