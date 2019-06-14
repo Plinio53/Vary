@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const database = require("../config/database.js")
+const database = require("../database.js")
 
 function slots(_números) {
     _números = _números.toString();
