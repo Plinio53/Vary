@@ -18,6 +18,8 @@ Criador: {type: Boolean, default: false},
 Partner: {type: Boolean, default: false},
 Guarda: {type: Boolean, default: false},
 Suporte: {type: Boolean, default: false},
+Reps: {type: Number, default: 0},
+RepLastTime: {type: String, default: '0000'},
 coinsLastTime: {type: String, default: '0000'}
 });
 

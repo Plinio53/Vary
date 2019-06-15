@@ -23,6 +23,7 @@ function slots(_números) {
 }
 
 exports.run = (vary, message, args) => {
+    if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send("Permissão `Gerenciar servidor` não encontrada em seu cargo!")
     database.Guilds.findOne({
         _id: message.guild.id
     }, function (error, servidor) {

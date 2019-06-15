@@ -2,7 +2,7 @@ const Vary = require("discord.js")
 
 exports.run = async (vary, message, args) => {
     let staff = new Vary.RichEmbed()
-        .setTitle(`Minha equipe`)
+        .setTitle(`Pessoas que contribuiram no meu desenvolvimento`)
         .addField(`Criador`,`${vary.users.get('375627393773207554').tag}`)
         .addField(`Seguranças:`,`${vary.users.get('268526982222970880').tag} \n${vary.users.get('485837271967465472').tag}`)
         .addField(`Desenvolvedor do Back-end:`,`${vary.users.get('375627393773207554').tag} \n${vary.users.get('268526982222970880').tag} \n${vary.users.get('395788326835322882').tag}`)
