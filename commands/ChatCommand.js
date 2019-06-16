@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async ({ vary, message, args }, t) => {
+exports.run = async (vary, message, args) => {
 
     if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("Permissão `Gerenciar canais` não encontrada em seu cargo!")
     let mensg = args.join(" ");

@@ -4,7 +4,7 @@ const moment = require("moment")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async ({ vary, message, args }, t) => {
+exports.run = async (vary, message, args) => {
 const duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 let embedinfo = new Discord.RichEmbed()
 .setColor('#7289DA')
