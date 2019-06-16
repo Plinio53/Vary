@@ -29,7 +29,7 @@
   "invalidRole": "You have to give me a valid role.",
   "onlyOldAccounts": "A sua conta precisa ter mais de um mês para usar essa funcionalidade!",
   "voiceChannelJoin": "Eu não consigo entrar nesse canal de voz!",
-  "sameUser": "Esse usuário é você 🤦.",
+  "sameUser": "Esse usuário é você <:vary_facepalm:588740891238465546>.",
   "needBiggerNumber": "O número precisa ser maior que {{number}}.",
   "needSmallerNumber": "O número precisa ser menor que {{number}}.",
   "invalidURL": "Essa URL é inválida!",

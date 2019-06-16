@@ -1,0 +1,9 @@
+{
+    "HelpEmbed": {
+        "Description": "Escolha uma categoria",
+        "MusicField": "🎧 Músicas",
+        "MusicDescription": "Aqui você pode ver os comandos para tocar um batidão para seu servidor!",
+        "AdminField": "👮 Administração",
+        "AdminDescription": "Nesta categoria você pode encontrar comandos de administração!."
+    }
+}

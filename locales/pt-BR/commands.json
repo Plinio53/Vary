@@ -13,7 +13,7 @@
         "notReason": "Sem motivo.",
         "banned": "O usuário **{{member}}** foi **banido** com sucesso por **{{author}}**.",
         "highestRole": "Seu **cargo** precisa ser **maior** que o do usuário **mencionado**.",
-        "noBannable": "**Não** posso **banir** esse usuário.",
+        "noBannable": "Eu não posso punir este usuário, meu cargo é menor que o do usuário a ser punido.",
         "noMention": "**Mencione** quem você deseja **banir**.",
         "noPerm": "Você **não possui** a permissão `Banir membros`.",
         "errorOccurred": "**Houve** um **erro** ao **executar** este comando."
@@ -52,6 +52,26 @@
     "daily": {
         "coinLastTime": "Parece que você já pegou seus Smiles diários hoje!",
         "daily": "Você pegou 350 Smiles hoje!"
+    },
+    "esay": {
+        "noPerm": "Você **não possui** a permissão `Administrador`.",
+        "writedBy": "Anunciado por: {{author}}",
+        "message": "Anúncio: {{sayMessage}}"
+    },
+    "fakemsg": {
+        "noArgs": "{{author}} **mencione um usuário**",
+        "noMessage": "{{author}} você precisa dizer algo!"
+    },
+    "hug": {
+        "noMention": "{{author}} abraçou-se a si mesmo...!",
+        "yesMention": "{{author}} deu um abraço a {{message.mentions.members.first().user.username}}. <a:Cat_hug:573232582075088916>"
+    },
+    "kick": {
+        "notFound": "Esse usuário não está aqui.",
+        "noPerm": "Você **não possui** a permissão `Expulsar membros`.",
+        "noBannable": "Eu não posso punir este usuário, meu cargo é menor que o do usuário a ser punido!",
+        "noReason": "Sem motivo.",
+        "kicked": "expulsou o {{member}} com o motivo: {{reason}}! <:vary_kick:589153392451125248>"
     },
     "kiss": {
         "noMention": "**Mencione em quem você quer dar um beijo.**",
