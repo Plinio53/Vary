@@ -19,7 +19,7 @@ let embedinfo = new Discord.RichEmbed()
 .addField("**<:vary_coberto:561295282613125150> Estou acordado a:**", `${duration}`, true)
 .addField('**<:notlikevary_2:552799726618279966> Adicione-me em seu servidor:**', '[Clique aqui](https://discordapp.com/api/oauth2/authorize?client_id=546490972901605386&permissions=8&scope=bot)', true)
 .addField('**<:FyLink:556600524032704532> Meu servidor de suporte:**', '[Clique aqui](https://discord.gg/VBfjn35)', true)
-.addField('**🏅 Menções Honrosas**' ,'`🔥ImDiogo912🔥#8687` Se não fosse por ele, eu nem iria existir! \n`Its_Gabi#2454` meu avatar foi feito por ela!', true)
+.addField('**🏅 Menções Honrosas**' ,'`🔥ImDiogo912🔥#8687` Se não fosse por ele, eu nem iria existir!', true)
 .setFooter(`Solicitado por: ${message.author.username}`, message.author.avatarURL)
 message.channel.send(embedinfo)
 }

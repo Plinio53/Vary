@@ -1,0 +1,61 @@
+{
+    "addemoji": {
+        "noPerm": "Você **não possui** a permissão `Gerenciar emojis`",
+        "sucess": "Emoji criado com sucesso!"
+    },
+    "calc": {
+        "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",
+        "invalid": "Conta matemática inválida!",
+        "question": "Questão: {{question}}",
+        "answer": "Resposta: {{answer}}"
+    },
+    "ban": {
+        "notReason": "Sem motivo.",
+        "banned": "O usuário **{{member}}** foi **banido** com sucesso por **{{author}}**.",
+        "highestRole": "Seu **cargo** precisa ser **maior** que o do usuário **mencionado**.",
+        "noBannable": "**Não** posso **banir** esse usuário.",
+        "noMention": "**Mencione** quem você deseja **banir**.",
+        "noPerm": "Você **não possui** a permissão `Banir membros`.",
+        "errorOccurred": "**Houve** um **erro** ao **executar** este comando."
+    },
+    "botinfo": {
+        "description": "Olá! Eu sou um simples bot para essa maravilhosa plataforma o Discord, possuo várias funções, tanto administrativas quanto entreterimento! Se você solicitou este comando, é porque você quer saber mais sobre mim. Logo abaixo está minhas informações gerais! E caso você gostar de mim, me ajude dando um upvote e adicionando-me em seu servidor!",
+        "seeCommands": "Veja meus comandos:",
+        "creator": "Criador:",
+        "prefix": "Prefixo:",
+        "developedIn": "Desenvolvido em:",
+        "connectedWith": "Conectado a",
+        "uptime": "Acordado a",
+        "botInvite": "Adicione-me a seu servidor",
+        "supportInvite": "Meu servidor de suporte",
+        "mentions": "🏅 Menções Honrosas",
+        "mentionsDiogo": "`🔥ImDiogo912🔥#8687` Se não fosse por ele, eu nem iria existir!"
+    },
+    "chat": {
+        "correctUsage": "Use `v;chat <on/off>`",
+        "disabled": "Canal **bloqueado** por: {{author}}",
+        "enabled": "Canal **desbloqueado** por {{author}}"
+    },
+    "clear": {
+        "noPerm": "Você **não possui** a permissão `Gerenciar mensagens`",
+        "noArgs": "O número de mensagens para eu deletar deverá ser entre 2 e 100!"
+    },
+    "config": {
+        "noPerm": "Você **não possui** a permissão `Gerenciar servidor`.",
+        "counter": "Contador definido no canal <#{{channel}}>",
+        "counterTopic": "Temos um total de: ${slots(message.guild.memberCount)} Membros",
+        "noArgs": "Qual será o canal?",
+        "welcome": "Mensagens de boas-vindas definidas no canal <#{{channel}}>",
+        "leave": "Mensagens de saída definidas no canal <#{{channel}}>",
+        "newDB": "Use o comando novamente!"
+    },
+    "daily": {
+        "coinLastTime": "Parece que você já pegou seus Smiles diários hoje!",
+        "daily": "Você pegou 350 Smiles hoje!"
+    },
+    "kiss": {
+        "noMention": "**Mencione em quem você quer dar um beijo.**",
+        "youMention": "**Você não pode se beijar.**",
+        "kiss": ":kissing_heart: {{author}} deu um beijo em {{message.mentions.members.first().user.username}}"
+    }
+}
