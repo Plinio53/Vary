@@ -10,7 +10,6 @@ module.exports = async (vary) => {
       {name: `🎬 videos`, type: 'WATCHING'},
       {name: `😜 meu website: https://vary.website/`, type: 'WATCHING'},
       {name: `😢 + 💶 = 😋😘 (https://paypal.me/Diogo912C)`, type: 'PLAYING'},
-      {name: `😋 Avatar feito por Its_Gabi#2454`, type: 'PLAYING'},
      {name: `Fui desenvolvido por ${vary.users.get('375627393773207554').tag}`, type: 'STREAMING', url: 'https://twitch.tv/imdiogo912'},
     {name: `🐦 Me siga no Twitter: @maidVary`, type: 'WATCHING'}
 
