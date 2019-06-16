@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const math = require('mathjs');
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({ vary, message, args }, t) => {
   let input = args.join(" ");
 if (!input) {
    message.reply('__Tens de dizer uma conta matemática para eu efetuar!__');

@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({ vary, message, args }, t) => {
 let member = message.mentions.users.first() || vary.users.get(args[0]) || message.author;
 let avatar = member.displayAvatarURL;
 if (avatar.endsWith(".gif")) {
