@@ -3,7 +3,7 @@ const config = require('../config.json')
 const db = require("../database.js")
 
 exports.run = async (vary, message, args) => {
-   if (!['375627393773207554', '268526982222970880', '485837271967465472'].includes(message.author.id)) {
+   if (!['375627393773207554', '268526982222970880', '485837271967465472', '395788326835322882'].includes(message.author.id)) {
     return message.reply('apenas' +
             ' os meus' +
             ' desenvolvedores têm a permissão de executar este comando!')
