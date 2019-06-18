@@ -4,6 +4,7 @@ module.exports = async (vary) => {
 
   const LavalinkManager = require('../lavalink/lavalinkManager')
   vary.lavalinkManager = new LavalinkManager(vary)
+  console.log('Lavalink iniciado com sucesso!')
 
   let status = [
       {name: '🎶 música', type: 'LISTENING'},

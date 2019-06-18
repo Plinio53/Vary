@@ -38,5 +38,5 @@ cpuStat.usagePercent(function(err, percent, seconds) {
 
 exports.config = {
     name: 'status',
-    aliases: []
+    aliases: ['stats', 'host']
 }

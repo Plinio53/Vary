@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = (vary, message, args) => {
 
   if (vary.lavalinkManager.manager.has(message.guild.id)) {
-    vary.calls.get(message.guild.id).player.stop()
+    vary.calls.get(message.guild.id).player.resume()
     
   } else {
       message.channel.send(`Não estou tocando nada!`)
@@ -11,6 +11,6 @@ exports.run = (vary, message, args) => {
 }
 
 exports.config = {
-    name: 'stop',
-    aliases: ['skip']
+    name: 'resume',
+    aliases: []
 }
