@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const database = require("../../database.js")
+const database = require("../database.js")
 
 exports.run = (vary, message, args) => {
     database.Users.findOne({

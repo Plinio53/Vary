@@ -5,5 +5,5 @@ const manager = new ShardingManager('./vary.js', {
     autoReconnect: true
   });
 
-manager.spawn();
+manager.spawn(1);
 manager.on('launch', shard => console.log(`Shard ${shard.id} inciada com sucesso!`));
