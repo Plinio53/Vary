@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const snek = require('snekfetch');
+const fetch = require('node-fetch');
 const moment = require('moment');
 require('moment-duration-format');
 moment.locale('pt-BR');
@@ -8,7 +8,7 @@ exports.run = async (vary, message, args) => {
 if (args.length === 0) return message.reply('Qual package você quer ver?');
 const query = args.join(' ');
 try {
-const { body } = await snek.get(`https://registry.npmjs.com/${query.toLowerCase()}`);
+const { body } = await fetch.get(`https://registry.npmjs.com/${query.toLowerCase()}`);
 const version = body.versions[body['dist-tags'].latest];
 let deps = version.dependencies ? Object.keys(version.dependencies) : null;
 let maintainers = body.maintainers.map(user => user.name);
