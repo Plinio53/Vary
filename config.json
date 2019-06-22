@@ -1,6 +1,3 @@
 {
-    "prefix": "v;",
-    "redirect_uri": "http%3A%2F%2Fvary.website%2Flogin&response_type=code&scope=identify%20guilds",
-    "id": "546490972901605386",
-    "secret": "${process.env.SECRET}"
+    "prefix": "v;"
   }
