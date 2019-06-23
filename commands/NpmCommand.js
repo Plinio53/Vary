@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const fetch = require('node-fetch');
+const fetch = require('snekfetch');
 const moment = require('moment');
 require('moment-duration-format');
 moment.locale('pt-BR');
