@@ -36,7 +36,7 @@
     "opusscript": "0.0.6",
     "os": "0.1.1",
     "simple-youtube-api": "5.1.1",
-    "snekfetch": "4.0.4",
+    "node-fetch": "2.6.0",
     "btoa": "^1.2.1",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
