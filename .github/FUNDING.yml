@@ -7,6 +7,6 @@ ko_fi: # Replace with a single Ko-fi username
 tidelift: # Replace with a single Tidelift platform-name/package-name e.g., npm/babel
 custom: # Replace with a single custom sponsorship URL
 
-github: Diogo912
-custom: https://paypal.me/Diogo912C
+github: [Diogo912]
+custom: https://paypal.me/maidVary
 patreon: ItsDiogo912
