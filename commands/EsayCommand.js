@@ -3,6 +3,8 @@ const Discord = require("discord.js");
 exports.run = async (vary, message, args) => {
 if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Permissão `ADMINISTRADOR` não encontrada em seu cargo!")
 
+  if (args[0] == null) {return message.channel.send(`Digite algo para eu mandar!`)}
+ 
   const sayMessage = args.join(" ");
 
   let servIcon = message.guild.iconURL;
