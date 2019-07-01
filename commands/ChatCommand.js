@@ -9,16 +9,16 @@ exports.run = async ({vary, message, args}, t) => {
     if(args[0] == "OFF" || args[0] == "off"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: false});
-        message.channel.send(`Canal **bloqueado** por: ${message.author}`)
+        message.channel.send(t(commands:clear.disabled))
         return;
     }
     if(args[0] == "ON" || args[0] == "on"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: true});
-        message.channel.send(`Canal **desbloqueado** por: ${message.author}`)
+        message.channel.send(t(commands:clear.enabled))
         return;
     }
-    message.reply("Use: `v;chat <on/off>`")
+    message.reply(t(commands:clear.correctUsage))
 
     
     
