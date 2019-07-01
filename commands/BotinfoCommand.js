@@ -4,11 +4,11 @@ const moment = require("moment")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 const duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 let embedinfo = new Discord.RichEmbed()
 .setColor('#7289DA')
-.setThumbnail(vary.user.avatarURL)
+.setThumbnail(vary.user.displayAvatarURL)
 .setTitle(" **<:vary_wink:551817912361418963>|** \`\`Informações sobre mim:\`\`")
 .addField('** Introdução:**', '\`Olá! Eu sou um simples bot para essa maravilhosa plataforma o Discord, possuo várias funções, tanto administrativas quanto entreterimento! Se você solicitou este comando, é porque você quer saber mais sobre mim. Logo abaixo está minhas informações gerais! E caso você gostar de mim, me ajude dando um upvote e adicionando-me em seu servidor!\`', true)
 .addField('**<:FyCustomerServiceInformation:554113734113755138> Veja meus comandos:**', `v;help`, true)
