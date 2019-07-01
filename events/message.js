@@ -1,7 +1,9 @@
 const Discord = require("discord.js")
 const config = require("../config.json")
 const database = require("../database.js")
-
+const fs = require('fs')
+const i18next = require('i18next')
+const translationBackend = require('i18next-node-fs-backend')
 module.exports = async (vary, message, args, member) => {
     if(message.channel.name === "🔖│sugestões"){
         await message.react('✅')
@@ -32,23 +34,59 @@ module.exports = async (vary, message, args, member) => {
         if(usuario) { 
             let prefix = [`<@${vary.user.id}> `, `<@!${vary.user.id}> `, config.prefix, 'vary ', 'Vary ']
             prefix.find(prefix=>{
-                if (!message.content.startsWith(prefix)) return;
-                try {
-                    let args = message.content.slice(prefix.length).trim().split(" ")            
-                    let cmd = args.shift().toLowerCase()
-                    let comando = vary.commands.get(cmd) || vary.commands.get(vary.aliases.get(cmd))
-                    if(comando) {
-                        ///Se o usuário estiver banido do bot ele vai enviar uma mensagem.
-                        if(!usuario.Ban || usuario.Criador) {
-                            comando.run(vary, message, args);
-                        } else {
-                            message.channel.send(`Lamento mais você está banido de meus comandos`)
-                        }            
-                    }                } catch (err) {
-                    console.error(err)
-                }
+                database.Guilds.findOne({
+                    _id: message.guild.id
+                }, function (err, server) {
+                    if (server) {
+                        if (!message.content.startsWith(prefix)) return;
+                        try {
+                            let t;
+                            const setFixedT = function (translate) {
+                                t = translate
+                            }
+                            const language = (server && server.lang) || 'pt-BR'
+                            setFixedT(i18next.getFixedT(language))
+                            return new Promise(async (resolve, reject) => {
+                                i18next.use(translationBackend).init({
+                                    ns: ['commands', 'embeds', 'errors', 'permissions'],
+                                    preload: await fs.readdir('./locales/'),
+                                    fallbackLng: 'pt-BR',
+                                    backend: {
+                                        loadPath: './locales/{{lng}}/{{ns}}.json'
+                                    },
+                                    interpolation: {
+                                        escapeValue: false
+                                    },
+                                    returnEmptyString: false
+                                }, (err, f) => {
+                                    if (f) {
+                                        let args = message.content.slice(prefix.length).trim().split(" ")            
+                                        let cmd = args.shift().toLowerCase()
+                                        let comando = vary.commands.get(cmd) || vary.commands.get(vary.aliases.get(cmd))
+                                        if(comando) {
+                                            ///Se o usuário estiver banido do bot ele vai enviar uma mensagem.
+                                            if(!usuario.Ban || usuario.Criador) {
+                                                comando.run({vary, message, args}, t);
+                                            } else {
+                                                message.channel.send(`Lamento mais você está banido de meus comandos`)
+                                            }            
+                                        }
+                                    }
+                                })
+                            })           
+                        } catch (err) {
+                            console.error(err)
+                        }
+                        
+                    } else {
+                        let server = new database.Guilds({
+                            _id: message.guild.id
+                        })
+                        server.save()
+                    }
+                })
             });
-        } else if(!usuario) {
+        } else {
             var saveU = new database.Users({
                 userID: message.author.id
             });
