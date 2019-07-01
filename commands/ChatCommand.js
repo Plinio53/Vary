@@ -9,16 +9,16 @@ exports.run = async ({vary, message, args}, t) => {
     if(args[0] == "OFF" || args[0] == "off"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: false});
-        message.channel.send(t(commands:clear.disabled))
+        message.channel.send(t("commands:chat.disabled", {author: message.author}))
         return;
     }
     if(args[0] == "ON" || args[0] == "on"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: true});
-        message.channel.send(t(commands:clear.enabled))
+        message.channel.send(t("commands:chat.disabled", {author: message.author}))
         return;
     }
-    message.reply(t(commands:clear.correctUsage))
+    message.channel.reply(t("commands:chat.correctUsage"))
 
     
     
