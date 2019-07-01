@@ -49,7 +49,7 @@ module.exports = async (vary, message, args, member) => {
                             return new Promise(async (resolve, reject) => {
                                 i18next.use(translationBackend).init({
                                     ns: ['commands', 'embeds', 'errors', 'permissions'],
-                                    preload: await fs.readdir('./locales/'),
+                                    preload: await fs.readdirSync("./locales/"),
                                     fallbackLng: 'pt-BR',
                                     backend: {
                                         loadPath: './locales/{{lng}}/{{ns}}.json'
