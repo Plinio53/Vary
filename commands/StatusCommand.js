@@ -6,7 +6,7 @@ const ms = require("ms")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let { version } = require("discord.js");
 let duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 

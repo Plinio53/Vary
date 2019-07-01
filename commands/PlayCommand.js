@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js')
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
   const mss = require('pretty-ms')
   if (!args[0]) {
     return message.reply('Você precisa indicar uma música!')

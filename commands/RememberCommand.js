@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let reminderTime = args[0];
 if (!reminderTime) return message.channel.send("**Especifique o tempo. Exemplo: v;relembrar 15min Ir comer**");
 

@@ -3,7 +3,7 @@ const moment = require("moment")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let user;
 if (message.mentions.users.first()) {
   user = message.mentions.users.first();

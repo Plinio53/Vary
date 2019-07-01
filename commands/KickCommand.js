@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 if (!message.member.hasPermission('KICK_MEMBERS')) return message.channel.send("Permissão `Expulsar membros` não encontrada em seu cargo!")
 
 let member = message.mentions.members.first() || message.guild.members.get(args[0]);

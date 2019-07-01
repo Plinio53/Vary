@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 var replys1 = [
     ":gem: : :gem: : :gem: ",
     ":lemon: : :lemon: : :lemon: ",

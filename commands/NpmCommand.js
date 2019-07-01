@@ -3,7 +3,7 @@ const fetch = require('snekfetch');
 const moment = require('moment');
 require('moment-duration-format');
 moment.locale('pt-BR');
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 
 if (args.length === 0) return message.reply('Qual package você quer ver?');
 const query = args.join(' ');

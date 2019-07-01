@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const ms = require("ms");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 if (!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send("Permissão `Silenciar usuários` não encontrada em seu cargo!")
     let reason = args.slice(2).join(" ");
     if (!reason) return message.reply("Indique um motivo!");

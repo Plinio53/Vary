@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
     let user = message.mentions.users.first() || message.guild.members.get(args[0])
 
   let botmessage = args.slice(1).join(' ')

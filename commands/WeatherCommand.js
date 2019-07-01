@@ -4,7 +4,7 @@ const moment = require("moment")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 tempo.find({search: args.join(" "), degreeType: 'C'}, function(err, result){
     if (err) return message.channel.send(err);
 

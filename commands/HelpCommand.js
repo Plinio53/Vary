@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("../config.json")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let helpembed = new Discord.RichEmbed()
 
 

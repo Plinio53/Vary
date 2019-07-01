@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 var database = require('../database.js');
 
-exports.run = (vary, message, args) => {
+exports.run = ({vary, message, args}, t) => {
     const ownerID = '375627393773207554';
     if (message.author.id !== ownerID) return message.channel.send("⛔ **ACCESSO NEGADO**");
    let razaou = args.slice(0).join(' ')

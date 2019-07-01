@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const Jimp = require("jimp");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 
     let meow = message.content.split(" ").slice(1);
     let args1 = meow.join(' ');
