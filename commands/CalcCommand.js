@@ -14,7 +14,7 @@ let answer;
 try {
    answer = math.eval(question);
 } catch (err) {
-   return message.reply(`**Conta matemática inválida:** ${err}`);
+   return message.reply(t("commands:chat.mathEvaluationError", {error: err}))
 }
 
 const embed = new Discord.RichEmbed()
