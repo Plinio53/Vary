@@ -10,12 +10,6 @@ module.exports = async (vary, message, args, member) => {
         await message.react('❌')
     }
     if(message.author.bot) return;
-    if(message.content.includes("discord.gg/")) {
-        if(!message.member.hasPermission("ADMINISTRATOR")) {
-            message.delete();
-            return  message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
-        }
-    };
 
     let mention = [`<@${vary.user.id}>`, `<@!${vary.user.id}>`]
     mention.find(mention => {
@@ -38,6 +32,14 @@ module.exports = async (vary, message, args, member) => {
                     _id: message.guild.id
                 }, function (err, server) {
                     if (server) {
+                        if(server.AntiInvite){
+                            if(message.content.includes("discord.gg/")) {
+                                if(!message.member.hasPermission("ADMINISTRATOR")) {
+                                    message.delete();
+                                    return  message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
+                                }
+                            };
+                        }
                         if (!message.content.startsWith(prefix)) return;
                         try {
                             let t;

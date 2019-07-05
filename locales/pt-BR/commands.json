@@ -38,7 +38,7 @@
     },
     "clear": {
         "noPerm": "Você **não possui** a permissão `Gerenciar mensagens`",
-        "noArgs": "O número de mensagens para eu deletar deverá ser entre 2 e 100!"
+        "correctUsage": "O número de mensagens para eu deletar deverá ser entre 2 e 100!"
     },
     "config": {
         "noPerm": "Você **não possui** a permissão `Gerenciar servidor`.",

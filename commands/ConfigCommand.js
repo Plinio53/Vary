@@ -28,7 +28,11 @@ exports.run = ({vary, message, args}, t) => {
         _id: message.guild.id
     }, function (error, servidor) {
         if(servidor){
-            if(args[0] === 'contador' || args[0] === 'counter'){
+            if(args[0] === "anti-invite" || args[0] === "anti-div" || args[0] === "anti-divulgação"){
+                servidor.AntiInvite = true;
+                servidor.save();
+                message.reply(`Agora apenas com permissão administrador poderão divulgar convites!`)
+            } else if(args[0] === 'contador' || args[0] === 'counter'){
                 let channel = message.mentions.channels.first() || message.channel;
                 if(channel){
                     servidor.Contador = true;
@@ -63,11 +67,10 @@ exports.run = ({vary, message, args}, t) => {
                 message.channel.send(new Discord.RichEmbed()
                     .addField(`Comandos`, '`v;config contador`, `v;config welcome`, `v;config leave`')
                     .addField(`Módulos`, `
-                    Contador: ${servidor.Contador ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    Mensagens de boas-vindas: ${servidor.Welcome ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    Mensagens de saída: ${servidor.Leave ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    Sugestões: ${servidor.Suggests ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
-                    Cargo automático: ${servidor.AutoRole ? '<:FySwitchOn:552677398294822915>' : '<:FySwitchOff:552677397317681172>'}
+                    Contador: ${servidor.Contador ? 'Ativado' : 'Desativado'}
+                    Mensagens de boas-vindas: ${servidor.Welcome ? 'Ativado' : 'Desativado'}
+                    Mensagens de saída: ${servidor.Leave ? 'Ativado' : 'Desativado'}
+                    Cargo automático: ${servidor.AntiInvite ? 'Ativado' : 'Desativado'}
                     `)
                 );
             }
@@ -80,8 +83,7 @@ exports.run = ({vary, message, args}, t) => {
                 WelcomeChannel: 'Nenhum',
                 Leave: false,
                 LeaveChannel: 'Nenhum',
-                AutoRole: false,
-                AutoRoleID: 'Nenhum',
+                AntiInvite: false,
             });
             servidor.save();
             message.reply(`Use o comando novamente!`);

@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const VaryLog = require("varylog");
+const VaryLog = require("varylogs");
 
 module.exports = async (vary) => {
 

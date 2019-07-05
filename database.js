@@ -37,6 +37,7 @@ ChatSuggests: {type: String, default: 'Nenhum'},
 Contador: {type: Boolean, default: false},
 ChatContador: {type: String, default: 'Nenhum'},
 AutoRole: {type: Boolean, default: false},
+AntiInvite: {type: Boolean, default: false},
 AutoRoleID: {type: String, default: "Nenhum"},
 })
 

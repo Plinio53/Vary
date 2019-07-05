@@ -15,7 +15,7 @@
   "author": "ImDiogo912",
   "license": "ISC",
   "dependencies": {
-    "varylog": "1.0.1",
+    "varylogs": "1.0.0",
     "cpu-stat": "2.0.1",
     "request": "2.88.0",
     "pretty-ms": "5.0.0",

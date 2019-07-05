@@ -1,9 +1,9 @@
 const Discord = require('discord.js')
 
 exports.run = async ({vary, message, args}, t) => {
-if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply("Permissão `Gerenciar Emojis` não encontrada em seu cargo!!")
+if (!message.member.hasPermission("MANAGE_EMOJIS")) return message.reply(t("commands:addemoji.noPerm"))
   message.guild.createEmoji(args[0], args[1])
-  message.reply('Emoji criado com sucesso!')
+  message.reply(t("commands:addemoji.sucess"))
 }
 
 exports.config = {
