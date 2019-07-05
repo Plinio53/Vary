@@ -11,16 +11,14 @@ module.exports = async (vary, message, args, member) => {
     }
     if(message.author.bot) return;
 
-    let mention = [`<@${vary.user.id}>`, `<@!${vary.user.id}>`]
-    mention.find(mention => {
-        if(message.content === mention) {
-            let embed = new Discord.RichEmbed()
-            .setColor('#36393e')
-            .setDescription(`Meu prefixo é: \`${config.prefix}\`, Para usar meus comando use ${config.prefix}ajuda`)
-            .setFooter(`Fui criado por ${vary.users.get('375627393773207554').tag}!`)
-            message.channel.send(embed);
-        }
-    });
+    if(message.content === `<@${vary.user.id}>` || message.content === `<@!${vary.user.id}>`) {
+        let embed = new Discord.RichEmbed()
+        .setColor('#36393e')
+        .setDescription(`Meu prefixo é: \`${config.prefix}\`, Para usar meus comando use ${config.prefix}ajuda`)
+        .setFooter(`Fui criado por ${vary.users.get('375627393773207554').tag}!`)
+        
+        message.channel.send(embed);
+    }
 
     database.Users.findOne({
         userID: message.author.id
@@ -36,7 +34,7 @@ module.exports = async (vary, message, args, member) => {
                             if(message.content.includes("discord.gg/")) {
                                 if(!message.member.hasPermission("ADMINISTRATOR")) {
                                     message.delete();
-                                    return message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
+                                    message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
                                 }
                             };
                         }
