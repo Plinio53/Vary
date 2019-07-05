@@ -36,7 +36,7 @@ module.exports = async (vary, message, args, member) => {
                             if(message.content.includes("discord.gg/")) {
                                 if(!message.member.hasPermission("ADMINISTRATOR")) {
                                     message.delete();
-                                    return  message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
+                                    return message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
                                 }
                             };
                         }
