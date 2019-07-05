@@ -1,7 +1,7 @@
 const Discord = require("discord.js")
 const database = require("../database.js")
 
-exports.run = (vary, message, args) => {
+exports.run = ({vary, message, args}, t) => {
     database.Users.findOne({
         "userID": message.author.id
     }, function(error, usuario) {

@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const moment = require('moment')
 moment.locale('pt-br')
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("Permissão `Banir membros` não encontrada em seu cargo!")
 
     var razao = args.slice(1).join(" ")

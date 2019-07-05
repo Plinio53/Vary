@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const db = require('../database.js');
 
-exports.run = (vary, message, args) => {
+exports.run = ({vary, message, args}, ts) => {
 let member = message.mentions.users.first() || vary.users.get(args[0]) || message.author;
   db.Users.findOne({userID: member.id}, (err, user) =>{
 

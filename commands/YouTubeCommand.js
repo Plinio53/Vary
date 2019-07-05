@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const YouTube = require("simple-youtube-api");
 const youtube = new YouTube(process.env.YT);
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 
   youtube.searchVideos(args, 1)
       .then(results => {

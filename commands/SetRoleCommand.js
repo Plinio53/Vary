@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 if (!message.member.hasPermission('MANAGE_MEMBERS')) return message.channel.send("Permissão `Gerenciar Membros` não encontrada em seu cargo!")
 let membro = message.mentions.members.first() || message.guild.members.get(args[0])
 let cargo_nome = message.mentions.roles.first().name || args[1]

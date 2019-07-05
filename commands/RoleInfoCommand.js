@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
   let role = message.mentions.roles.first() || message.guild.roles.get(args[0]) || message.guild.roles.find(role => role.name === args[0]);
 
   if (!role) role = message.member.highestRole;

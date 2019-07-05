@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const math = require('mathjs');
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
   let input = args.join(" ");
 if (!input) {
    message.reply('__Tens de dizer uma conta matemática para eu efetuar!__');
@@ -14,7 +14,7 @@ let answer;
 try {
    answer = math.eval(question);
 } catch (err) {
-   return message.reply(`**Conta matemática inválida:** ${err}`);
+   return message.reply(t("errors:mathEvaluationError", {error: err}))
 }
 
 const embed = new Discord.RichEmbed()

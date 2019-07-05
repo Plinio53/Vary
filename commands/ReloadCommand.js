@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = (vary, message, args) => {
+exports.run = ({vary, message, args}, t) => {
 
     if (message.author.id !== "375627393773207554") return message.channel.send("⛔ **ACCESSO NEGADO**");
 

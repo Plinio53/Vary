@@ -1,6 +1,6 @@
 const Vary = require("discord.js")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
     let staff = new Vary.RichEmbed()
         .setTitle(`Pessoas que contribuiram no meu desenvolvimento`)
         .addField(`Criador`,`${vary.users.get('375627393773207554').tag}`)

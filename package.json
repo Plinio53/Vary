@@ -1,5 +1,5 @@
 {
-  "name": "Vary",
+  "name": "vary",
   "version": "1.0.0",
   "description": "",
   "main": "vary.js",
@@ -44,7 +44,9 @@
     "express-session": "^1.16.1",
     "util": "0.12.0",
     "weather-js": "2.0.0",
-    "ytdl-core": "0.29.1"
+    "ytdl-core": "0.29.1",
+    "i18next": "^17.0.3",
+    "i18next-node-fs-backend": "^2.1.3"
   },
   "devDependencies": {
     "nodemon": "1.19.1"

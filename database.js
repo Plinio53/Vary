@@ -40,8 +40,16 @@ AutoRole: {type: Boolean, default: false},
 AutoRoleID: {type: String, default: "Nenhum"},
 })
 
+const Keys = new Schema({
+id: String,
+Used: {type: Boolean, default: false},
+UsedOn: String
+})
+
 var UsersDB = mongoose.model('Users', Users);
 var GuildsDB = mongoose.model('Guilds', Guilds);
+var KeysDB = mongoose.model('Keys', Keys);
 
 exports.Guilds = GuildsDB
 exports.Users = UsersDB
+exports.Keys = KeysDB

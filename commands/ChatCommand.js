@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 
     if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("Permissão `Gerenciar canais` não encontrada em seu cargo!")
     let mensg = args.join(" ");
@@ -9,16 +9,16 @@ exports.run = async (vary, message, args) => {
     if(args[0] == "OFF" || args[0] == "off"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: false});
-        message.channel.send(`Canal **bloqueado** por: ${message.author}`)
+        message.channel.send(t("commands:chat.disabled", {author: message.author}))
         return;
     }
     if(args[0] == "ON" || args[0] == "on"){
         let role = message.guild.roles.find("name", "@everyone");
         message.channel.overwritePermissions(role, {SEND_MESSAGES: true});
-        message.channel.send(`Canal **desbloqueado** por: ${message.author}`)
+        message.channel.send(t("commands:chat.enabled", {author: message.author}))
         return;
     }
-    message.reply("Use: `v;chat <on/off>`")
+    message.channel.reply(t("commands:chat.correctUsage"))
 
     
     

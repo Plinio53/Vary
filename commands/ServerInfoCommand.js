@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
 let day = message.guild.createdAt.getDate()
 let month = 1 + message.guild.createdAt.getMonth()

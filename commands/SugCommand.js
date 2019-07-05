@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = (vary, message, args) => {
+exports.run = ({vary, message, args}, t) => {
 
     let sugestao = args.join(" ");
     if (!sugestao) return message.reply("Insira sua sugestão.")

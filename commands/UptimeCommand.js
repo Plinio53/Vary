@@ -4,7 +4,7 @@ const moment = require("moment")
 moment.locale('pt-BR');
 require("moment-duration-format")
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 let duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 let nomeeapelido = message.guild.member(message.author.id).nickname || message.author.username;
 

@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 const m = await message.channel.send("Ping?");
 m.edit(`🏓Ping ${m.createdTimestamp - message.createdTimestamp}ms.\n ⚡API ${Math.round(vary.ping)}ms.`);
 }

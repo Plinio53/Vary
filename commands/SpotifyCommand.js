@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (vary, message, args) => {
+exports.run = async ({vary, message, args}, t) => {
 var user = message.mentions.users.first() || message.author;
 
 if (user.presence.game.name === 'Spotify' && user.presence.game.type === 2) {
