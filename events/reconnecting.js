@@ -1,8 +1,9 @@
 const Discord = require("discord.js")
+const VaryLog = require("varylog");
 
 module.exports = async (vary) => {
 
-console.log(`Reconectando ao Discord`)
+VaryLog.Reconnect();
 
 vary.user.setStatus('dnd'),
 vary.user.setGame('Reconnecting...');
