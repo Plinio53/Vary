@@ -65,12 +65,12 @@ exports.run = ({vary, message, args}, t) => {
                 }
             } else {
                 message.channel.send(new Discord.RichEmbed()
-                    .addField(`Comandos`, '`v;config contador`, `v;config welcome`, `v;config leave`')
+                    .addField(`Comandos`, '`v;config contador`, `v;config welcome`, `v;config leave`, `v;config anti-div`')
                     .addField(`Módulos`, `
                     Contador: ${servidor.Contador ? 'Ativado' : 'Desativado'}
                     Mensagens de boas-vindas: ${servidor.Welcome ? 'Ativado' : 'Desativado'}
                     Mensagens de saída: ${servidor.Leave ? 'Ativado' : 'Desativado'}
-                    Cargo automático: ${servidor.AntiInvite ? 'Ativado' : 'Desativado'}
+                    Bloqueador de convites: ${servidor.AntiInvite ? 'Ativado' : 'Desativado'}
                     `)
                 );
             }

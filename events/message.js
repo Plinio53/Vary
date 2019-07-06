@@ -32,7 +32,7 @@ module.exports = async (vary, message, args, member) => {
                     if (server) {
                         if(server.AntiInvite){
                             if(message.content.includes("discord.gg/") && !message.member.hasPermission('ADMINISTRATOR')) {
-                                    message.delete().then(() => message.reply(":x: **Você não pode divulgar outros servidores de Discord**"))                              
+                                    message.delete().then(() => message.reply(t("errors.antiDiv")))                              
                                 
                             };
                         }
@@ -62,11 +62,10 @@ module.exports = async (vary, message, args, member) => {
                                         let cmd = args.shift().toLowerCase()
                                         let comando = vary.commands.get(cmd) || vary.commands.get(vary.aliases.get(cmd))
                                         if(comando) {
-                                            ///Se o usuário estiver banido do bot ele vai enviar uma mensagem.
                                             if(!usuario.Ban || usuario.Criador) {
                                                 comando.run({vary, message, args}, t);
                                             } else {
-                                                message.channel.send(`Lamento mais você está banido de meus comandos`)
+                                                message.channel.send(t(errors.botban))
                                             }            
                                         }
                                     }

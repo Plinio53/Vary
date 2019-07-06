@@ -1,0 +1,13 @@
+addReviewers: true
+
+addAssignees: true
+
+reviewers: 
+  - Diogo912
+  - DanielaGC
+  - MysteryMS
+
+skipKeywords:
+  - wip
+
+numberOfReviewers: 0
