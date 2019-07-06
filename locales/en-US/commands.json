@@ -1,0 +1,6 @@
+{
+    "play": {
+        "playingNow": "Playing now: `{{track}}`",
+        "addQueue": "`{{track}}` added to queue"
+    }
+}

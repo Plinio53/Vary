@@ -4,7 +4,7 @@ const math = require('mathjs');
 exports.run = async ({vary, message, args}, t) => {
   let input = args.join(" ");
 if (!input) {
-   message.reply('__Tens de dizer uma conta matemática para eu efetuar!__');
+   message.reply(t("commands:calc.noArgs"));
    return;
 }
 
@@ -20,8 +20,8 @@ try {
 const embed = new Discord.RichEmbed()
    .setThumbnail("https://images-na.ssl-images-amazon.com/images/I/31QYTepQomL.png")
    .setColor('RANDOM')
-   .addField("**Questão:**", question, true)
-   .addField("**Resposta:**", answer)
+   .addField(t("commands:calc.question"), question, true)
+   .addField(t("commands:calc.answer"), answer)
 
 message.channel.send({
    embed

@@ -1,16 +1,17 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
-if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("Permissão `Banir membros` não encontrada em seu cargo!")
+if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(t("errors.botMissingOnePermission", {permission: 'Banir membros'}))
+if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(t("errors.missingOnePermission", {permission: 'Banir membros'}))
 
 let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 let channel = member.guild.channels.find('name', '🚫│punições');
 if(!member)
-  return message.reply("Não encontrei esse usuário neste servidor");
-    if (!member.bannable) return message.reply("Eu não posso punir este usuário, meu cargo é menor que o do usuário a ser punido!")
+  return message.reply(t("errors.invalidUser"));
+    if (!member.bannable) return message.reply(t("errors.memberNotBannable"))
 
 let reason = args.slice(1).join(' ');
-if(!reason) reason = "Sem motivo";
+if(!reason) reason = "";
     const banembed = new Discord.RichEmbed()
 
         .setThumbnail(member.user.avatarURL)
@@ -24,10 +25,9 @@ if(!reason) reason = "Sem motivo";
         .addField("📑 | Motivo", reason)
         .setTimestamp(new Date())
 
-await member.ban(reason)
-    await member.send(`Você foi banido do servidor ${message.guild.name} por ${message.author.username} com o motivo: ${reason}`)
-  .catch(error => message.channel.send(`Desculpe, ${message.author} ocorreu um erro ao executar este comando: ${error}`));
-  message.reply(`baniu ${member.user} com o motivo: ${reason}`)
+  await member.ban(reason)
+  .catch(error => message.channel.send(t("errors.generic", {error: error})));
+  message.channel.send(t("commands:ban.banned", {author: message.author.username}, {member: member}))
 channel.send(banembed);
 }
 
