@@ -42,13 +42,13 @@ module.exports = async (vary, message, args, member) => {
                             const setFixedT = function (translate) {
                                 t = translate
                             }
-                            const language = (server && server.lang) || 'en-US'
+                            const language = (server && server.lang) || 'pt-BR'
                             setFixedT(i18next.getFixedT(language))
                             return new Promise(async (resolve, reject) => {
                                 i18next.use(translationBackend).init({
                                     ns: ['commands', 'embeds', 'errors', 'permissions'],
                                     preload: await fs.readdirSync("./locales/"),
-                                    fallbackLng: 'en-US',
+                                    fallbackLng: 'pt-BR',
                                     backend: {
                                         loadPath: './locales/{{lng}}/{{ns}}.json'
                                     },
