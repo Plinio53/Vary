@@ -31,11 +31,9 @@ module.exports = async (vary, message, args, member) => {
                 }, function (err, server) {
                     if (server) {
                         if(server.AntiInvite){
-                            if(message.content.includes("discord.gg/")) {
-                                if(!message.member.hasPermission("ADMINISTRATOR")) {
-                                    message.delete();
-                                    message.reply(":x: **Você não pode divulgar outros servidores de Discord**");
-                                }
+                            if(message.content.includes("discord.gg/") && !message.member.hasPermission('ADMINISTRATOR')) {
+                                    message.delete().then(() => message.reply(":x: **Você não pode divulgar outros servidores de Discord**"))                              
+                                
                             };
                         }
                         if (!message.content.startsWith(prefix)) return;
