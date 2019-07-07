@@ -18,7 +18,7 @@ let daily = (replys1[Math.floor(Math.random() * daily.length)])
           if ((86400000 / 2) - (Date.now() - user.coinsLastTime) > 0) return message.channel.send('Você já pegou seus Smiles diários hoje, espere para pegar novamente')
           user.Smiles += daily
           user.coinsLastTime = Date.now()
-          message.reply('Você pegou ${daily} smiles diários')
+          message.reply(`Você pegou ${daily} smiles diários`)
           user.save();
           ;
 } else {
