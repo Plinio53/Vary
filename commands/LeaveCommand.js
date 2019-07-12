@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
-    voiceChannel.leave();
+    message.guild.voiceChannel.leave();
     vary.lavalinkManager.manager.delete(message.guild.id)
 }
 
