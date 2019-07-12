@@ -1,6 +1,6 @@
 const { PlayerManager } = require('discord.js-lavalink')
 const { EventEmitter } = require('events')
-let nodes = require('../lavalinkNodes.json').hosts
+let nodes = process.env.LAVAIP
 nodes = nodes.map(a => {
   let obj = {}
   obj.host = a
