@@ -1,13 +1,12 @@
 const { PlayerManager } = require('discord.js-lavalink')
 const { EventEmitter } = require('events')
 let nodes = require('../lavalinkNodes.json').hosts
-nodes = nodes.map(a => {
   let obj = {}
-  obj.host = a
+  obj.host = process.env.LAVAIP
   obj.port = '2333'
   obj.password = process.env.LAVAPW
   return obj
-})
+
 
 class Player extends EventEmitter {
   constructor (player) {
