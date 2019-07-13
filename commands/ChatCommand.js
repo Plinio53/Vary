@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
-    if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.reply(t("errors.botMissingOnePermission", {permission: 'Gerenciar canais'}))
     if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply(t("errors.missingOnePermission", {permission: 'Gerenciar canais'}))
+    if (!message.guild.me.hasPermission("MANAGE_CHANNELS")) return message.reply(t("errors.botMissingOnePermission", {permission: 'Gerenciar canais'}))
     let mensg = args.join(" ");
     if(!mensg)
         return message.channel.reply(t("commands:chat.correctUsage"))

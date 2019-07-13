@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
 
-if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(t("commands:clear.noPerm"))
+if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(t("errors:missingOnePermission", {permission: 'Gerenciar mensagens'}))
+if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply(t("errors.botMissingOnePermission", {permission: 'Gerenciar mensagens'}))
 
 const deleteCount = parseInt(args[0], 10);
 
