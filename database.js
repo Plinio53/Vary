@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const Discord = require('discord.js')
 
-mongoose.connect(process.env.MONGODB, { useNewUrlParser: true }, (err) => {
+mongoose.connect(`${process.env.MONGODB}`, { useNewUrlParser: true }, (err) => {
   if (err) return console.log('Erro ao conectar na database!')
   console.log('Conectado ao BANCO DE DADOS!')
 })
