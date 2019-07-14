@@ -5,7 +5,7 @@
   "main": "vary.js",
   "scripts": {
     "start": "node vary.js",
-    "dev": "node shard.js",
+    "dev": "pm2 start vary.js",
     "test": "nodemon vary.js"
   },
   "engines": {
@@ -45,6 +45,7 @@
     "ytdl-core": "0.29.1"
   },
   "devDependencies": {
-    "nodemon": "1.19.1"
+    "nodemon": "1.19.1",
+    "pm2": "3.5.1"
   }
 }
