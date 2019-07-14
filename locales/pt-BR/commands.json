@@ -1,6 +1,7 @@
 {
     "addemoji": {
-        "sucess": "Emoji criado com sucesso!"
+        "sucess": "Emoji criado com sucesso!",
+        "correctUsage": "Use: `v;addemoji <link do emoji> <nome do emoji>"
     },
     "calc": {
         "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",

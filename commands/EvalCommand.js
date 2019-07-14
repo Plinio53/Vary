@@ -4,7 +4,7 @@ const db = require("../database.js")
 
 exports.run = async ({vary, message, args}, t) => {
    if (!['375627393773207554', '268526982222970880', '485837271967465472', '395788326835322882'].includes(message.author.id)) {
-    return message.reply(t("developerOnly"))
+    return message.reply(t("errors:developerOnly"))
   }
   const util = require('util')
   let code = args.join(' ')

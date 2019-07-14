@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
-if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Permissão `ADMINISTRADOR` não encontrada em seu cargo!")
+if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply(t("errors:missingOnePermission", {permission: 'Administrador'}))
+if (!message.guild.me.hasPermission("ADMINISTRATOR")) return message.reply(t("errors:botMissingOnePermission", {permission: 'Administrador'}))
 
   if (args[0] == null) {return message.channel.send(`Digite algo para eu mandar!`)}
  

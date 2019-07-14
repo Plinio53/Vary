@@ -7,8 +7,8 @@ if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(t("erro
 let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 let channel = member.guild.channels.find('name', '🚫│punições');
 if(!member)
-  return message.reply(t("errors.invalidUser"));
-    if (!member.bannable) return message.reply(t("errors.memberNotBannable"))
+  return message.reply(t("errors:invalidUser"));
+    if (!member.bannable) return message.reply(t("errors:memberNotBannable"))
 
 let reason = args.slice(1).join(' ');
 if(!reason) reason = "";
@@ -26,7 +26,7 @@ if(!reason) reason = "";
         .setTimestamp(new Date())
 
   await member.ban(reason)
-  .catch(error => message.channel.send(t("errors.generic", {error: error})));
+  .catch(error => message.channel.send(t("errors:generic", {error: error})));
   message.channel.send(t("commands:ban.banned", {author: message.author.username}, {member: member}))
 channel.send(banembed);
 }
