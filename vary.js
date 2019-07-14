@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Discord = require("discord.js");
 const fs = require("fs")
 const vary = new Discord.Client({
@@ -13,7 +14,7 @@ vary.commands = new Discord.Collection()
 vary.aliases = new Discord.Collection()
 
 const DBL = require("dblapi.js");
-const dbl = new DBL(process.env.DBL,{ webhookPort: 5000, webhookAuth: process.env.DBLPW }, vary);
+const dbl = new DBL(process.env.DBL, vary);
 
 dbl.on('posted', () => {
   console.log('Contador de servidores postado!');
@@ -22,14 +23,6 @@ dbl.on('posted', () => {
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
-
-
-dbl.webhook.on('ready', hook => {
-  console.log(`Webhook online! http://${hook.hostname}:${hook.port}${hook.path}`);
-});
-dbl.webhook.on('vote', vote => {
-  console.log(`O membro com o ID ${vote.user} votou em mim ;w;!`);
-});
 
 
 fs.readdir("./events/", (err, files) => {

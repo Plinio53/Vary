@@ -29,9 +29,16 @@ exports.run = ({vary, message, args}, t) => {
     }, function (error, servidor) {
         if(servidor){
             if(args[0] === "anti-invite" || args[0] === "anti-div" || args[0] === "anti-divulgação"){
+                if(args[1] === "enable" || args[0] === "ativar") {
                 servidor.AntiInvite = true;
                 servidor.save();
-                message.reply(`Agora apenas com permissão administrador poderão divulgar convites!`)
+                message.reply(`Agora apenas membros com permissão administrador poderão divulgar convites!`)
+               }
+                if(args[1] === "disable" || args[1] === "desativar") {
+                    servidor.AntiInvite = false;
+                    servidor.save();
+                    message.reply(`Agora todos os membros poderão divulgar convites!`)
+                }
             } else if(args[0] === 'contador' || args[0] === 'counter'){
                 let channel = message.mentions.channels.first() || message.channel;
                 if(channel){
