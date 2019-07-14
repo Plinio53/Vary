@@ -4,7 +4,7 @@ let nodes = require('../lavalinkNodes.json').hosts
 nodes = nodes.map(() => {
   let obj = {}
   obj.host = process.env.LAVAIP
-  obj.port = '2333'
+  obj.port = '8080'
   obj.password = process.env.LAVAPW
   return obj
 })
