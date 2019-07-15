@@ -13,7 +13,7 @@ membro.addRole(cargo.id).then(() => {message.reply(`O cargo: ${cargo.name} foi a
 }
 
 exports.config = {
-    name: 'addcargo',
-    aliases: ['setartag', 'setrole'],
+    name: 'setrole',
+    aliases: ['setartag', 'addcargo'],
     category: 'admin'
 }
