@@ -1,5 +1,5 @@
-const Discord = require("discord.js"),
-const giveaways = require("discord-giveaways"),
+const Discord = require("discord.js");
+const giveaways = require("discord-giveaways");
 const ms = require("ms");
 
 exports.run = async ({vary, message, args}, t) => {
