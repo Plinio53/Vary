@@ -1,9 +1,11 @@
 {
-    "HelpEmbed": {
-        "Description": "Escolha uma categoria",
-        "MusicField": "🎧 Músicas",
-        "MusicDescription": "Aqui você pode ver os comandos para tocar um batidão para seu servidor!",
-        "AdminField": "👮 Administração",
-        "AdminDescription": "Nesta categoria você pode encontrar comandos de administração!."
-    }
+    "Music": "**🎧 Músicas**",
+    "Admin": "**👮 Administração**",
+    "Miscellaneous": "🗃 Miscelânea",
+    "Minecraft": "**<a:Minecraft:528990466675572737> Minecraft**",
+    "Economy": "**<a:Panda_Money:579308773257117696> Economia**",
+    "Actions": "✨ Ações",
+    "Devs": "💻 Desenvolvedores",
+    "Bot": "<:vary_discord:556588151012065321> Bot",
+    "Images": "🖼 Imagens"
 }
