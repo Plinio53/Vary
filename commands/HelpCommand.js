@@ -7,7 +7,7 @@ let helpembed = new Discord.RichEmbed()
 
   let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setDescription('Escolha uma categoria')
+  .setDescription('Estes são meus comandos, você poderá usar qualquer um desta maneira: `v;<comando>` ou <@546490972901605386> <comando>')
   .addField('**🎧 Músicas**', vary.commands.filter(c => c.config.category === "music").map(c => c.config.name).join(", "))
   .addField('**👮 Administração**', vary.commands.filter(c => c.config.category === "admin").map(c => c.config.name).join(", "))
   .addField('**🗃 Miscelânea**', vary.commands.filter(c => c.config.category === "random").map(c => c.config.name).join(", "))
