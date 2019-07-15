@@ -33,7 +33,7 @@ module.exports = async (vary, member) => {
     .addField('<a:BlobCry:574968840174174247> | Agora temos:', member.guild.memberCount, 'membros!')
     .setTimestamp()
 
-         database.Guilds.findOne({ _id: member.guild.id }, function (error, servidor) {
+    database.Guilds.findOne({ _id: member.guild.id }, function (error, servidor) {
         if(servidor){
             if(servidor.Contador){
                 member.guild.channels.get(servidor.ChatContador).setTopic(`Temos um total de: ${slots(member.guild.memberCount)} Membros`)
