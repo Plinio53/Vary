@@ -11,6 +11,21 @@
     "ban": {
         "banned": "O usuário **{{member}}** foi **banido** com sucesso por **{{author}}**."
     },
+    "giveaway": {
+        "reroll": ":tada: Novo(s) vencedor(es): {winners}! Parabéns!"
+    },
+    "giveaway-embed": {
+        "giveaway": "🎉🎉 **SORTEIO** 🎉🎉",
+        "giveawayEnded2": "🎉🎉 **SORTEIO ACABADO** 🎉🎉",
+        "timeRemaining": "Tempo restante: **{duration}** !",
+        "inviteToParticipate": "Reaja com 🎉 para participar!",
+        "winMessage": "Parabéns, {winners}! Você/vocês ganhou/ganharam **{prize}** !",
+        "embedFooter": "Sorteio",
+        "noWinner": "Sorteio cancelado.",
+        "winners": "Vencedor(es)",
+        "endedAt": "Acaba a",
+        "units": { "seconds": "segundos", "minutes": "minutos", "hours": "horas", "days": "dias" }	
+    },
     "botinfo": {
         "description": "Olá! Eu sou um simples bot para essa maravilhosa plataforma o Discord, possuo várias funções, tanto administrativas quanto entreterimento! Se você solicitou este comando, é porque você quer saber mais sobre mim. Logo abaixo está minhas informações gerais! E caso você gostar de mim, me ajude dando um upvote e adicionando-me em seu servidor!",
         "seeCommands": "Veja meus comandos:",
