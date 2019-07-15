@@ -52,5 +52,6 @@ message.channel.send({
 
 exports.config = {
     name: 'kiss',
-    aliases: ['beijar']
+    aliases: ['beijar'],
+    category: 'actions'
 }

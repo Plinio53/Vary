@@ -35,5 +35,6 @@ if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send("P
 
 exports.config = {
     name: 'warn',
-    aliases: ['avisar']
+    aliases: ['avisar'],
+    category: 'admin'
 }

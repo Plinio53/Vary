@@ -9,5 +9,6 @@ message.member.addRole(cargo.id);
 
 exports.config = {
     name: 'notificar',
-    aliases: []
+    aliases: [],
+    category: ''
 }

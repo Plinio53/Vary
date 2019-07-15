@@ -16,5 +16,6 @@ message.channel.send(embed)
 
 exports.config = {
     name: 'mccombo',
-    aliases: []
+    aliases: [],
+    category: 'minecraft'
 }

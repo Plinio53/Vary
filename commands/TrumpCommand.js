@@ -22,5 +22,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'trump',
-    aliases: []
+    aliases: [],
+    category: 'images'
 }

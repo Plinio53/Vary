@@ -10,5 +10,6 @@ const sayeMessage = args.join(" ");
 
   exports.config = {
       name: 'say',
-      aliases: ['falar']
+      aliases: ['falar'],
+      category: 'admin'
   }

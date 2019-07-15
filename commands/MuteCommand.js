@@ -66,5 +66,6 @@ if (!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send("
 
 exports.config = {
     name: 'mute',
-    aliases: ['silenciar']
+    aliases: ['silenciar'],
+    category: 'admin'
 }

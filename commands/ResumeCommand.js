@@ -12,5 +12,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'resume',
-    aliases: []
+    aliases: [],
+    category: 'music'
 }

@@ -26,5 +26,6 @@ if (!message.guild.me.hasPermission("ADMINISTRATOR")) return message.reply(t("er
 
 exports.config = {
     name: 'esay',
-    aliases: ['anunciar']
+    aliases: ['anunciar'],
+    category: 'admin'
 }

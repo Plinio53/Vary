@@ -20,5 +20,6 @@ message.reply(`enviou ${smiles} a ${member}`)
 
 exports.config = {
     name: 'pagar',
-    aliases: ['pay']
+    aliases: ['pay'],
+    category: ''
 }

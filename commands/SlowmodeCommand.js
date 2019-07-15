@@ -8,5 +8,6 @@ if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("Perm
 
 exports.config = {
     name: 'slowmode',
-    aliases: ['slow']
+    aliases: [],
+    category: 'admin'
 }

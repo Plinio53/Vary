@@ -19,5 +19,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'daily',
-    aliases: ['diário']
+    aliases: ['diário'],
+    category: 'economy'
 }

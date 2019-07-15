@@ -8,5 +8,6 @@ message.channel.setName(args[0].split(" ").join("\u2006"))
 
 exports.config = {
     name: 'renamechannel',
-    aliases: ['renomearcanal']
+    aliases: ['renomearcanal'],
+    category: 'admin'
 }

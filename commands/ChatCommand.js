@@ -26,5 +26,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'chat',
-    aliases: []
+    aliases: [],
+    category: 'admin'
 }

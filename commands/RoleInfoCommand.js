@@ -19,5 +19,6 @@ exports.run = async ({vary, message, args}, t) => {
 
   exports.config = {
       name: 'roleinfo',
-      aliases: []
+      aliases: [],
+      category: 'random'
   }

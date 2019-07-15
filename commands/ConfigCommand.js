@@ -23,7 +23,8 @@ function slots(_números) {
 }
 
 exports.run = ({vary, message, args}, t) => {
-    if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send("Permissão `Gerenciar servidor` não encontrada em seu cargo!")
+    if (!message.member.hasPermission("MANAGE_GUILD")) return message.reply(t("errors:missingOnePermission", {permission: 'Gerenciar servidor'}))
+    if (!message.guild.me.hasPermission("ADMINISTRATOR")) return message.reply(t("errors:botMissingOnePermission", {permission: 'Administrador'}))
     database.Guilds.findOne({
         _id: message.guild.id
     }, function (error, servidor) {
@@ -100,5 +101,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'config',
-    aliases: []
+    aliases: [],
+    category: 'admin'
 }

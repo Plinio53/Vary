@@ -26,5 +26,6 @@ message.channel.send(embedinfo)
 
 exports.config = {
     name: 'botinfo',
-    aliases: ['vary']
+    aliases: ['vary'],
+    category: 'bot'
 }

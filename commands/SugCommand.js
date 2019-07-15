@@ -20,5 +20,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'sug',
-    aliases: []
+    aliases: [],
+    category: ''
 }

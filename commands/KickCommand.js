@@ -35,5 +35,6 @@ channel.send(kickembed);
 
 exports.config = {
     name: 'kick',
-    aliases: ['expulsar']
+    aliases: ['expulsar'],
+    category: 'admin'
 }

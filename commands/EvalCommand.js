@@ -32,5 +32,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'eval',
-    aliases: []
+    aliases: [],
+    category: 'dev'
 }

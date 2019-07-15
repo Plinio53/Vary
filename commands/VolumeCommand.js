@@ -19,5 +19,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'volume',
-    aliases: ['vol']
+    aliases: ['vol'],
+    category: 'music'
 }

@@ -15,5 +15,6 @@ if (!args[1]) {
 
 exports.config = {
     name: 'addemoji',
-    aliases: ['criaremoji']
+    aliases: ['criaremoji'],
+    category: 'admin'
 }

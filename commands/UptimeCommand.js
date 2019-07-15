@@ -13,5 +13,6 @@ message.channel.send(`**${nomeeapelido}**, estou online à: **${duration}**`);
 
 exports.config = {
     name: 'uptime',
-    aliases: []
+    aliases: [],
+    category: 'bot'
 }

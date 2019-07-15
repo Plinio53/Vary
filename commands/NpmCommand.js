@@ -59,5 +59,6 @@ console.log(error);
 
 exports.config = {
     name: 'npm',
-    aliases: []
+    aliases: [],
+    category: 'dev'
 }

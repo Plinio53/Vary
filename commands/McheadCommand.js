@@ -16,5 +16,6 @@ let reason = args.slice(0).join(' ');
 
 exports.config = {
     name: 'mchead',
-    aliases: []
+    aliases: [],
+    category: 'minecraft'
 }

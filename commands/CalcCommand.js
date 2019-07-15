@@ -30,5 +30,6 @@ message.channel.send({
 
 exports.config = {
     name: 'calc',
-    aliases: ['calcular']
+    aliases: ['calcular'],
+    category: 'random'
 }

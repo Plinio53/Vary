@@ -19,5 +19,6 @@ message.channel.send({
 
 exports.config = {
     name: 'avatar',
-    aliases: []
+    aliases: [],
+    category: 'images'
 }

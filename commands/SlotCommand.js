@@ -71,5 +71,6 @@ message.channel.send(embed)
 
 exports.config = {
     name: 'slot',
-    aliases: []
+    aliases: [],
+    category: 'random'
 }

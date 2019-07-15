@@ -29,5 +29,6 @@ const userinfoembed = new Discord.RichEmbed()
 
 exports.config = {
     name: 'userinfo',
-    aliases: []
+    aliases: [],
+    category: 'random'
 }

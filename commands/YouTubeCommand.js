@@ -24,5 +24,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'youtube',
-    aliases: ['yt']
+    aliases: ['yt'],
+    category: 'music'
 }

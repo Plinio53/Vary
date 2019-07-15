@@ -27,5 +27,6 @@ let year = message.guild.createdAt.getFullYear()
 
 exports.config = {
     name: 'serverinfo',
-    aliases: ['servidor']
+    aliases: ['servidor'],
+    category: 'random'
 }

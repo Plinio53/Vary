@@ -17,5 +17,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'sugerir',
-    aliases: ['suggest']
+    aliases: ['suggest'],
+    category: ''
 }

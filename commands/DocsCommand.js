@@ -13,5 +13,6 @@ request({
 
 exports.config = {
     name: 'docs',
-    aliases: []
+    aliases: [],
+    category: 'dev'
 }

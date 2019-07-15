@@ -57,5 +57,6 @@ message.channel.send({
 
 exports.config = {
     name: 'abraçar',
-    aliases: ['hug']
+    aliases: ['hug'],
+    category: 'actions'
 }

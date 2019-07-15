@@ -36,5 +36,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config   = {
     name: 'varyban',
-    aliases: ['botban']
+    aliases: ['botban'],
+    category: 'dev'
 };

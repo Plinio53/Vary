@@ -12,5 +12,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'pause',
-    aliases: ['pausar']
+    aliases: ['pausar'],
+    category: 'music'
 }

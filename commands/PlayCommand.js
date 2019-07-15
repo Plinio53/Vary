@@ -23,5 +23,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'play',
-    aliases: ['tocar']
+    aliases: ['tocar'],
+    category: 'music'
 }

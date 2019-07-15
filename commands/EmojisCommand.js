@@ -10,5 +10,6 @@ message.channel.send(emotes)
 
 exports.config = {
     name: 'emojis',
-    aliases: []
+    aliases: [],
+    category: 'random'
 }

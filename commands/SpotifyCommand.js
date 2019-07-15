@@ -35,5 +35,6 @@ if (user.presence.game.name === 'Spotify' && user.presence.game.type === 2) {
 
 exports.config = {
     name: 'spotify',
-    aliases: []
+    aliases: [],
+    category: 'music'
 }

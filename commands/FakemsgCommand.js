@@ -18,5 +18,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'fakemsg',
-    aliases: ['trollmsg']
+    aliases: ['trollmsg'],
+    category: 'random'
 }

@@ -33,5 +33,6 @@ channel.send(banembed);
 
 exports.config = {
     name: 'ban',
-    aliases: ['banir']
+    aliases: ['banir'],
+    category: 'admin'
 }

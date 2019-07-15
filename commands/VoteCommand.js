@@ -6,5 +6,6 @@ message.reply('Oi, caso queira dar um upvote em mim pode acessar o link https://
 
 exports.config = {
     name: 'vote',
-    aliases: ['votar']
+    aliases: ['votar'],
+    category: 'bot'
 }

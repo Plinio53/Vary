@@ -18,5 +18,6 @@ exports.run = ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'reload',
-    aliases: []
+    aliases: [],
+    category: 'dev'
 }

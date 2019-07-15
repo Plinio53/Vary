@@ -31,5 +31,6 @@ setTimeout(function() {
 
 exports.config = {
     name: 'relembrar',
-    aliases: ['lembrete']
+    aliases: ['lembrete'],
+    category: 'random'
 }

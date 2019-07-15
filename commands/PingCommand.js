@@ -7,5 +7,6 @@ m.edit(`🏓 Ping ${Math.round(vary.ping)}ms.\n ⚡ API ${m.createdTimestamp - m
 
 exports.config = {
     name: 'ping',
-    aliases: ['pong']
+    aliases: ['pong'],
+    category: 'bot'
 }

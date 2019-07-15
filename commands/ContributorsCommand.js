@@ -18,5 +18,6 @@ exports.run = async ({vary, message, args}, t) => {
 
 exports.config = {
     name: 'contribuidores',
-    aliases: ['contributors', 'staff']
+    aliases: ['contributors', 'staff'],
+    category: 'random'
 }
