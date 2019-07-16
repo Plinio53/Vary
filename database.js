@@ -16,11 +16,12 @@ CasadoCom: {type: Array, default: []},
 Casado: {type: Boolean, default: false},
 Criador: {type: Boolean, default: false},
 Partner: {type: Boolean, default: false},
-Guarda: {type: Boolean, default: false},
+Segurança: {type: Boolean, default: false},
 Suporte: {type: Boolean, default: false},
 Reps: {type: Number, default: 0},
 RepLastTime: {type: String, default: '0000'},
-coinsLastTime: {type: String, default: '0000'}
+coinsLastTime: {type: String, default: '0000'},
+// Keys: {type: Number, default: 0}
 });
 
 const Guilds = new Schema({
@@ -36,15 +37,16 @@ Suggests: {type: Boolean, default: false},
 ChatSuggests: {type: String, default: 'Nenhum'},
 Contador: {type: Boolean, default: false},
 ChatContador: {type: String, default: 'Nenhum'},
-AutoRole: {type: Boolean, default: false},
 AntiInvite: {type: Boolean, default: false},
+AutoRole: {type: Boolean, default: false},
 AutoRoleID: {type: String, default: "Nenhum"},
 })
 
 const Keys = new Schema({
 id: String,
 Used: {type: Boolean, default: false},
-UsedOn: String
+UsedOn: String,
+userID: String,
 })
 
 var UsersDB = mongoose.model('Users', Users);
