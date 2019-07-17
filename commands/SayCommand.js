@@ -8,6 +8,7 @@ if (args[0] == null) {return message.channel.send(`Digite algo para eu mandar!`)
 JSON.parse(args.join(" "))
 } catch (e) {
 message.channel.send(args.join(" "))
+message.channel.send(e)
 }
   }
 
