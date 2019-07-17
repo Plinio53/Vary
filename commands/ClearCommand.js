@@ -17,6 +17,6 @@ message.channel.bulkDelete(fetched)
 
 exports.config = {
     name: 'clear',
-    aliases: ['apagar'],
+    aliases: ['apagar', 'purge'],
     category: 'admin'
 }
