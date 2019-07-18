@@ -4,6 +4,17 @@
 </p>
 <h1 align="center">Vary</h1>
 
+## POR FAZER
+
+- [ ] Acabar o README.md
+- [x] Command/Event Handler
+- [x] Hospedagem
+- [ ] Categorias acabadas
+  - [ ] Fun
+  - [ ] Jogos
+  - [ ] Música
+  - [ ] Miscelânea
+
 ## Como contribuir:
 **Código fonte/Traduções:**
 Primeiramente você precisará clonar este repositório para seu Github!
