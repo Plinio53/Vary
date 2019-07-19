@@ -11,6 +11,7 @@ const Users = new Schema({
 userID: String,
 Smiles: {type: Number, default: 0},
 Doador: {type: Boolean, default: false},
+// Donate: {type: Number, default: 0},
 Ban: {type: Boolean, default: false},
 CasadoCom: {type: Array, default: []},
 Casado: {type: Boolean, default: false},
