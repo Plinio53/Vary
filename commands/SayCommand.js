@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async ({ vary, message, args }, t) => {
+exports.run = async ({ message, args }, t) => {
   function isJson(str) {
     try {
       JSON.parse(str)
