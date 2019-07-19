@@ -32,7 +32,7 @@ module.exports = async (vary, message, args, member) => {
                     if (server) {
                         if(server.AntiInvite){
                             if(message.content.includes("discord.gg/") && !message.member.hasPermission('ADMINISTRATOR')) {
-                                message.delete().then(() => message.reply(t("errors.antiDiv")))
+                                message.delete().then(() => message.reply(t("errors:antiDiv")))
 
                             };
                         }
