@@ -16,7 +16,7 @@ exports.run = ({vary, message, args}, t) => {
                     'userID': banir.id
                 }, function (arro, alvo) {
                     if (alvo) {
-                        if (alvo.ban) {
+                        if (alvo.Ban) {
                             alvo.Ban = false
                             alvo.Smiles = 0
                             alvo.save()
