@@ -39,12 +39,12 @@ module.exports = async (vary, message, args, member) => {
 
                         if (server.IgnoreChannel.includes(message.channel.id)) {
                             message.delete();
-                            message.channel.send(`este canal foi ignorado por algum superior`).then(msg => msg.delete(6000));
+                            message.channel.send(`Somente pessoas com a permissão administrador podem usar comandos neste canal!`).then(msg => msg.delete(6000));
                         }
 
                         if (server.IgnoreMembersChannel.includes(message.channel.id) && !message.member.hasPermission('ADMINISTRATOR')) {
                             message.delete();
-                            message.channel.send(`somente superiores podem usar comandos neste canal!`).then(msg => msg.delete(6000));
+                            message.channel.send(`Somente pessoas com a permissão administrador podem usar comandos neste canal!`).then(msg => msg.delete(6000));
                         }
                         if (!message.content.startsWith(prefix)) return;
                         try {
