@@ -60,7 +60,28 @@ exports.run = ({vary, message, args}, t) => {
                     message.channel.send(`Chat de Entrada setado em: ${channel}`);
                 } else {
                     message.channel.send('Qual será o canal?')
-                }
+                } else if (args[0] === 'ignore' || args[0] === 'ign') {
+                    const ch = message.mentions.channels.first();
+                    
+                    if (!args[1]) return message.channel.send(`informar o canal`);
+                    
+                    if (!ch) return message.channel.send(`canal inválido (teste)`);
+                    
+                    servidor.IgnoreChannel.push(ch.id)
+                    servidor.markModified('IgnoreChannel')
+                    servidor.save().then(async() => await message.channel.send(`agora o canal **${ch.name}** (\`${ch.id}\`) foi adicionado na lista de canais ignorados...`));
+                
+                } else if (args[0] === 'ignoremembers' || args[0] === 'ignmembers') {
+                    
+                     const ch = message.mentions.channels.first();
+                    
+                    if (!args[1]) return message.channel.send(`Qual será o canal?`);
+                    
+                    if (!ch) return message.channel.send(`Canal inválido!`);
+                    
+                    servidor.IgnoreMembersChannel.push(ch.id)
+                    servidor.markModified('IgnoreMembersChannel')
+                    servidor.save().then(async() => await message.channel.send(`Agora o canal **${ch.name}** (\`${ch.id}\`) foi adicionado na lista de canais ignorados por membros...`));
             } else if(args[0] === 'leave' || args[0] === "saída" || args[0] === "saida") {
                 let channel = message.mentions.channels.first();
                 if(channel){
@@ -92,6 +113,8 @@ exports.run = ({vary, message, args}, t) => {
                 Leave: false,
                 LeaveChannel: 'Nenhum',
                 AntiInvite: false,
+                IgnoreChannel: [],
+                IgnoreMembersChannel: []
             });
             servidor.save();
             message.reply(`Use o comando novamente!`);
