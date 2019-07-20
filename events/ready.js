@@ -7,13 +7,13 @@ module.exports = async (vary) => {
   console.log('Lavalink iniciado com sucesso!')
 
   let status = [
-/*      {name: '🎶 música', type: 'LISTENING'},
+      {name: '🎶 música', type: 'LISTENING'},
       {name: `🎬 videos`, type: 'WATCHING'},
-      {name: `😜 meu website: https://vary.website/`, type: 'WATCHING'}, */
+      {name: `😜 meu website: https://vary.website/`, type: 'WATCHING'}, 
       {name: `😢 + 💶 = 😋😘 (https://paypal.me/maidVary)`, type: 'PLAYING'},
-      {name: `🎂 Agora tenho 1 aninho! Obrigado a todos`, type: 'WATCHING'},
-/*     {name: `Fui desenvolvido por ${vary.users.get('375627393773207554').tag}`, type: 'STREAMING', url: 'https://twitch.tv/imdiogo912'},
-    {name: `🐦 Me siga no Twitter: @maidVary`, type: 'WATCHING'} */
+    //  {name: `🎂 Agora tenho 1 aninho! Obrigado a todos`, type: 'WATCHING'},
+     {name: `Fui desenvolvido por ${vary.users.get('375627393773207554').tag}`, type: 'STREAMING', url: 'https://twitch.tv/imdiogo912'},
+    {name: `🐦 Me siga no Twitter: @maidVary`, type: 'WATCHING'}
 
     ];
       console.log( `Carregado...! Olá mundo! Estou em ${vary.guilds.size} servers com ${vary.users.size} users` );
