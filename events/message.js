@@ -42,7 +42,7 @@ module.exports = async (vary, message, args, member) => {
                             const setFixedT = function (translate) {
                                 t = translate
                             }
-                            const language = (server && server.lang) || 'pt-BR'
+                            const language = (server && server.Lang) || 'pt-BR'
                             setFixedT(i18next.getFixedT(language))
                             return new Promise(async (resolve, reject) => {
                                 i18next.use(translationBackend).init({
