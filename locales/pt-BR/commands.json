@@ -69,6 +69,7 @@
     },
     "play": {
         "playingNow": "Tocando agora: `{{track}}`",
-        "addQueue": "`{{track}}` foi adicionado á fila!"
+        "addQueue": "`{{track}}` foi adicionado á fila!",
+        "noArgs": "Você precisa indicar uma música."
     }
 }
