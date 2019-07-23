@@ -5,6 +5,8 @@ moment.locale('pt-BR');
 require("moment-duration-format")
 
 exports.run = async ({vary, message, args}, t) => {
+const users = await vary.ShardUtils.getMembersSize();
+const guilds = await vary.shard.broadcastEval('vary.guilds.size').then(res => res.reduce((a, b) => a + b, 0));
 const duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 let embedinfo = new Discord.RichEmbed()
 .setColor('#7289DA')
@@ -15,7 +17,7 @@ let embedinfo = new Discord.RichEmbed()
 .addField('**<:coroinha:519546425080807434> Criador:**', '<@375627393773207554>', true)
 .addField('**<:FyKeyword:554113735724367882> Prefixo ativo:**', `v;`, true)
 .addField('**<:FyNodeJs:558702151598080000> Desenvolvido em:**', 'Discord.js - _v_ **_11.4.2_**', true)
-.addField("**<a:vary_happy:560869540561551370> Estou conectado a:**", ` **<:FyNetworkGroup:552286317333970956> ${vary.users.size}** usuários\n **<:guild:521125042982223874> ${vary.guilds.size}** servidores\n **<:FyChats:552150851020521472> ${vary.channels.size}** canais`, true)
+.addField("**<a:vary_happy:560869540561551370> Estou conectado a:**", ` **<:FyNetworkGroup:552286317333970956> ${users}** usuários\n **<:guild:521125042982223874> ${guilds}** servidores\n **<:FyChats:552150851020521472> ${vary.channels.size}** canais`, true)
 .addField("**<:vary_coberto:561295282613125150> Estou acordado a:**", `${duration}`, true)
 .addField('**<:notlikevary_2:552799726618279966> Adicione-me em seu servidor:**', '[Clique aqui](https://discordapp.com/api/oauth2/authorize?client_id=546490972901605386&permissions=8&scope=bot)', true)
 .addField('**<:FyLink:556600524032704532> Meu servidor de suporte:**', '[Clique aqui](https://discord.gg/VBfjn35)', true)
