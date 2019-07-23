@@ -71,5 +71,8 @@
         "playingNow": "Tocando agora: `{{track}}`",
         "addQueue": "`{{track}}` foi adicionado á fila!",
         "noArgs": "Você precisa indicar uma música."
+    },
+    "uptime": {
+        "uptime": "Estou online á {{uptime}}"
     }
 }

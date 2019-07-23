@@ -46,7 +46,7 @@ module.exports = async (vary, message, args, member) => {
                             setFixedT(i18next.getFixedT(language))
                             return new Promise(async (resolve, reject) => {
                                 i18next.use(translationBackend).init({
-                                    ns: ['commands', 'embeds', 'errors', 'permissions'],
+                                    ns: ['commands', 'categories', 'errors', 'permissions'],
                                     preload: await fs.readdirSync("./locales/"),
                                     fallbackLng: 'pt-BR',
                                     backend: {

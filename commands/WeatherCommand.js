@@ -30,7 +30,7 @@ tempo.find({search: args.join(" "), degreeType: 'C'}, function(err, result){
 }
 
 exports.config = {
-    name: 'tempo',
-    aliases: ['clima'],
+    name: 'weather',
+    aliases: ['clima', 'tempo'],
     category: 'random'
 }

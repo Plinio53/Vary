@@ -30,6 +30,7 @@
   "invalidEmoji": "Esse emoji é inválido.",
   "invalidRole": "You have to give me a valid role.",
   "onlyOldAccounts": "A sua conta precisa ter mais de um mês para usar essa funcionalidade!",
+  "onlyDonators": "Este comando só pode ser usado por Doadores (https://patreon.com/ItsDiogo912)",
   "voiceChannelJoin": "Eu não consigo entrar nesse canal de voz!",
   "sameUser": "Esse usuário é você <:vary_facepalm:588740891238465546>.",
   "needBiggerNumber": "O número precisa ser maior que {{number}}.",
