@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
+if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.reply(t("errors:botMissingOnePermission", {permission: t("permissions:MANAGE_WEBHOOKS")}))
     let user = message.mentions.users.first() || message.guild.members.get(args[0])
 
   let botmessage = args.slice(1).join(' ')

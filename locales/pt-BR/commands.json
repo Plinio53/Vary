@@ -3,11 +3,6 @@
         "sucess": "Emoji criado com sucesso!",
         "correctUsage": "Use: `v;addemoji <link do emoji> <nome do emoji>"
     },
-    "calc": {
-        "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",
-        "question": "**Questão:**",
-        "answer": "**Resposta:**"
-    },
     "ban": {
         "banned": "O usuário **{{member}}** foi **banido** com sucesso por **{{author}}**."
     },
@@ -23,6 +18,11 @@
         "supportInvite": "Meu servidor de suporte",
         "mentions": "🏅 Menções Honrosas",
         "mentionsDiogo": "`🔥ImDiogo912🔥#8687` Se não fosse por ele, eu nem iria existir!"
+    },
+    "calc": {
+        "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",
+        "question": "**Questão:**",
+        "answer": "**Resposta:**"
     },
     "chat": {
         "correctUsage": "Use `v;chat <on/off>`",
@@ -43,6 +43,9 @@
     "daily": {
         "coinLastTime": "Parece que você já pegou seus Smiles diários hoje!",
         "daily": "Você pegou 350 Smiles hoje!"
+    },
+    "docs": {
+        "noFound": "o documento **{{doc}}** não foi encontrado. Tente **novamente**."
     },
     "esay": {
         "writedBy": "Anunciado por: {{author}}",
