@@ -2,6 +2,7 @@ const Vary = require("discord.js")
 const fetch = require('node-fetch')
 
 exports.run = async ({vary, message, args}, t) => {
+    let url = args
     url = url.replace(PROTOCOL_REGEX, '').replace(PATH_REGEX, '')
     const embed = new Discord.RichEmbed()
     const body = await fetch(`https://isitup.org/${url}.json`).then(res => res.json())
