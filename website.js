@@ -76,24 +76,6 @@ app.get("/login",async function (req, res) {
 
    })
 })
-app.get("/changemoney",function(req,res){
-    if (!req.session.user) return res.redirect("/")
-    if (!authorized.includes(req.session.user.id)) return res.redirect("/")
-    res.render("changemoney.ejs",{
-      username: req.session.user.username
-    })
-})
-app.post("/changemoney",async function(req,res){
-    const {user,Smiles} = req.body
-    if ( (!user || !Smiles) && Smiles !== 0 ) return res.end("Inválido")
-    if (!req.session.user) return res.end("Não autorizado")
-    if (!authorized.includes(req.session.user.id)) return res.end("Não autorizado")
-    const data = await database.Users.findOne({"userID":user})
-    if (!data) return res.end("Não achei esse usuário no banco de dados")
-    data.Smiles = Smiles
-    data.save()
-    return res.end(`Dinheiro do usuário ${user} mudado para ${Smiles} com sucesso`)
-})
 
 console.log(`Website iniciado com sucesso!`)
 app.listen(4000)
