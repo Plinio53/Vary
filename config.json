@@ -1,5 +1,5 @@
 {
     "prefix": "v;",
-    "redirect_uri": "http%3A%2F%2Fvary.website%2Flogin&response_type=code&scope=identify%20guilds",
+    "redirect_uri": "http%3A%2F%2Fvary.website%3A4000%2Flogin&response_type=code&scope=identify%20guilds",
     "id": "546490972901605386"
 }
