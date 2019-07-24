@@ -1,3 +1,5 @@
 {
-    "prefix": "v;"
-  }
+    "prefix": "v;",
+    "redirect_uri": "http%3A%2F%2Flocalhost%3A4000%2Flogin&response_type=code&scope=identify",
+    "id": "546490972901605386"
+}
