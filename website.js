@@ -32,6 +32,10 @@ app.get("/log",function(req, res){
 
 })
 
+app.get("/tos",function(req, res){
+   res.render("terms.ejs",)
+})
+
 app.get("/login",async function (req, res) {
 
    if (!req.query.code) return res.redirect("/");
@@ -75,6 +79,11 @@ app.get("/login",async function (req, res) {
        })
 
    })
+})
+
+app.use(function(req, res){
+    res.status(404)
+    res.render("404.ejs")
 })
 
 console.log(`Website iniciado com sucesso!`)
