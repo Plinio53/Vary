@@ -8,12 +8,12 @@ exports.run = async ({vary, message, args}, t) => {
   let roleembed = new Discord.RichEmbed()
   .setColor(role.hexColor)
   .setTitle(`Cargo: ${role.name}`)
+  .addField('ID', role.id, true)
   .addField('Membros', role.members.size, true)
   .addField('Cor', role.hexColor, true)
   .addField('Data de criação', role.createdAt.toDateString(), true)
   .addField('Editavel', role.editable.toString(), true)
   .addField('Gerenciado', role.managed.toString(), true)
-  .addField('ID', role.id, true);
   message.channel.send(roleembed);
   }
 

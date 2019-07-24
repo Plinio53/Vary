@@ -59,6 +59,12 @@
         "noMention": "{{author}} abraçou-se a si mesmo...!",
         "yesMention": "{{author}} deu um abraço a {{message.mentions.members.first().user.username}}. <a:Cat_hug:573232582075088916>"
     },
+    "isitup": {
+        "up": "O website está online.",
+        "isDown": "Humm... Parece que este website está off.",
+        "details": "Demorou **{{body.response_time}}ms** para **{{body.response_ip}}** responder com o código HTTP **{{body.response_code}}**.",
+        "noWebsite": "You have to give me a website to check!"
+      },
     "kick": {
         "notFound": "Esse usuário não está aqui.",
         "noBannable": "Eu não posso punir este usuário, meu cargo é menor que o do usuário a ser punido!",
