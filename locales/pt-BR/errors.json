@@ -1,5 +1,5 @@
 {
-  "generic": "Ocorreu um erro ao executar o comando: {{error}}.",
+  "generic": "<a:error:603545211754512394> **|** Ocorreu um erro ao executar o comando: {{error}}.",
   "voiceChannelOnly": "Você precisa estar conectado a um canal de voz para usar o comando.",
   "sameVoiceChannelOnly": "Você precisa estar no mesmo canal que eu para usar o comando.",
   "guildOnly": "Este comando pode ser usado apenas em um servidor.",
@@ -28,7 +28,7 @@
   "invalidColor": "Essa cor é inválida.",
   "invalidGuild": "Esse servidor é inválido.",
   "invalidEmoji": "Esse emoji é inválido.",
-  "invalidRole": "You have to give me a valid role.",
+  "invalidRole": "Cargo inválido.",
   "onlyOldAccounts": "A sua conta precisa ter mais de um mês para usar essa funcionalidade!",
   "onlyDonators": "Este comando só pode ser usado por Doadores (https://patreon.com/ItsDiogo912)",
   "voiceChannelJoin": "Eu não consigo entrar nesse canal de voz!",
