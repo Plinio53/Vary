@@ -75,7 +75,7 @@ app.get("/login",async function (req, res) {
        })
 
    })
-
+})
 app.get("/changemoney",function(req,res){
     if (!req.session.user) return res.redirect("/")
     if (!authorized.includes(req.session.user.id)) return res.redirect("/")
@@ -93,8 +93,6 @@ app.post("/changemoney",async function(req,res){
     data.money = money
     data.save()
     return res.end(`Dinheiro do usuário ${user} mudado para ${money} com sucesso`)
-})
-
 })
 
 console.log(`Website iniciado com sucesso!`)
