@@ -1,0 +1,27 @@
+<html>
+ <body>
+  <center>
+    <h1>Ola <%=username%></h1>
+    <input id='user' placeholder = 'userID'>  <input id='Smiles' placeholder= 'Smiles do usuário'>
+    <br><br><button onclick='change()'>Mudar</button>
+  </center>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+    function change(){
+      $.ajax({
+        method:"POST",
+        url: "/changemoney",
+        data:{
+          user: $("#user").val(),
+          money: $("#money").val()
+        }
+      }).done(function(err){
+        alert(err)
+      })
+    }
+  </script>
+ </body>
+</html>
