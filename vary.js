@@ -1,11 +1,11 @@
 require('dotenv').config()
 const Discord = require("discord.js");
-const fs = require("fs")
+const fs = require("fs");
 const vary = new Discord.Client({
   disableEveryone: true,
   autoReconnect: true
 });
-const config = require("./config.json");
+const website = require("./website.js");
 const db = require('./database.js');
 
 vary.calls = new Discord.Collection()

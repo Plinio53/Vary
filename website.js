@@ -82,8 +82,5 @@ app.get("/login",async function (req, res) {
 
 })
 
+console.log(`Website iniciado com sucesso!`)
 app.listen(4000)
-
-
-
-
