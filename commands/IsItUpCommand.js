@@ -1,4 +1,4 @@
-const Vary = require("discord.js")
+const Discord = require("discord.js")
 const fetch = require('node-fetch')
 
 exports.run = async ({vary, message, args}, t) => {
