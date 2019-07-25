@@ -78,10 +78,10 @@
     },
     "play": {
         "playingNow": "Tocando agora: `{{track}}`",
-        "addQueue": "`{{track}}` foi adicionado á fila!",
+        "addQueue": "`{{track}}` foi adicionado à fila!",
         "noArgs": "Você precisa indicar uma música."
     },
     "uptime": {
-        "uptime": "Estou online á {{uptime}}"
+        "uptime": "Estou online há {{uptime}}"
     }
 }
