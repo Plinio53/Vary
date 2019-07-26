@@ -7,6 +7,8 @@ const vary = new Discord.Client({
 });
 const website = require("./website.js");
 const db = require('./database.js');
+const express = require('express');
+const http = require('http');
 
 vary.calls = new Discord.Collection()
 vary.queue = new Discord.Collection()
@@ -14,7 +16,7 @@ vary.commands = new Discord.Collection()
 vary.aliases = new Discord.Collection()
 
 const DBL = require("dblapi.js");
-const dbl = new DBL(process.env.DBL, vary);
+const dbl = new DBL(process.env.DBL, { webhookAuth: process.env.DBLPW, webhookServer: server }, vary);
 
 dbl.on('posted', () => {
   console.log('Contador de servidores postado!');
@@ -24,6 +26,20 @@ dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
 
+dbl.webhook.on('ready', hook => {
+  console.log(`Webhook on! ${hook.path}`);
+});
+dbl.webhook.on('vote', vote => {
+  console.log(`User com o ID ${vote.user} votou em mim!`);
+});
+
+app.get('/', (req, res) => {
+
+});
+
+server.listen(5000, () => {
+  console.log('Ok');
+});
 
 fs.readdir("./events/", (err, files) => {
   if (err) console.log(err);
