@@ -18,7 +18,7 @@ vary.commands = new Discord.Collection()
 vary.aliases = new Discord.Collection()
 
 const DBL = require("dblapi.js");
-const dbl = new DBL(process.env.DBL, { webhookAuth: process.env.DBLPW, webhookServer: server }, vary);
+const dbl = new DBL(process.env.DBL, vary);
 
 dbl.on('posted', () => {
   console.log('Contador de servidores postado!');
@@ -27,14 +27,6 @@ dbl.on('posted', () => {
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
-
-dbl.webhook.on('ready', hook => console.log(`Webhook on! http://${hook.hostname}:${hook.port}${hook.path}`));
-
-dbl.webhook.on("vote", (userVoted) => console.log(userVoted));
-
-server.listen(5000, () => {
-  console.log('Ok');
-});
 
 fs.readdir("./events/", (err, files) => {
   if (err) console.log(err);

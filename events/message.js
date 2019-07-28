@@ -5,11 +5,10 @@ const fs = require('fs')
 const i18next = require('i18next')
 const translationBackend = require('i18next-node-fs-backend')
 module.exports = async (vary, message, args, member) => {
-/*    if(message.channel.name === "🔖│sugestões"){
+    if(message.channel.name === "🔖│sugestões"){
         await message.react('✅')
         await message.react('❌')
     }
-*/
     if(message.author.bot) return;
 
     if(message.content === `<@${vary.user.id}>` || message.content === `<@!${vary.user.id}>`) {
