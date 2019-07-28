@@ -28,16 +28,9 @@ dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
 
-dbl.webhook.on('ready', hook => {
-  console.log(`Webhook on! ${hook.path}`);
-});
-dbl.webhook.on('vote', vote => {
-  console.log(`User com o ID ${vote.user} votou em mim!`);
-});
+dbl.webhook.on('ready', hook => console.log(`Webhook on! http://${hook.hostname}:${hook.port}${hook.path}`));
 
-app.get('/', (req, res) => {
-
-});
+dbl.webhook.on("vote", (userVoted) => console.log(userVoted));
 
 server.listen(5000, () => {
   console.log('Ok');
