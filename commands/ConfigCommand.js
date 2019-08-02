@@ -102,5 +102,5 @@ exports.run = ({vary, message, args}, t) => {
 exports.config = {
     name: 'config',
     aliases: [],
-    category: 'admin'
+    category: 'config'
 }

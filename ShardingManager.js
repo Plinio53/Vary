@@ -1,8 +1,6 @@
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('./vary.js', {
     token: process.env.TOKEN,
-    autoSpawn: true,
-    autoReconnect: true
   });
 
 manager.spawn(1);

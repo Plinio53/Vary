@@ -10,7 +10,7 @@ exports.run = async ({vary, message, args}, t) => {
         .addField(`Suporte:`,` ` /*${vary.users.get('ID').tag} */)
         .addField(`Desenhistas:`,`${vary.users.get('203199927986159616').tag} \n${vary.users.get('419125869475397633').tag} \n${vary.users.get('366405124702339072').tag} \n${vary.users.get('414841675794481155').tag}`)
         /*.addField(`Tradutores:`,`${vary.users.get('375627393773207554').tag}`)*/
-        .addField(`Doadores:`,`https://paypal.me/maidVary` /*`${vary.users.get('ID').tag}`*/)
+        .addField(`Doadores:`,`http://vary.website:4000/donate` /*`${vary.users.get('ID').tag}`*/)
        /*.addField(`Bug Hunters:`,`${vary.users.get('ID').tag}`)*/
     message.reply(staff)
 }

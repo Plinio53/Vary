@@ -4,20 +4,7 @@
         "correctUsage": "Use: `v;addemoji <link do emoji> <nome do emoji>"
     },
     "ban": {
-        "banned": "O usuário **{{member}}** foi **banido** com sucesso por **{{author}}**."
-    },
-    "botinfo": {
-        "description": "Olá! Eu sou um simples bot para essa maravilhosa plataforma o Discord, possuo várias funções, tanto administrativas quanto entreterimento! Se você solicitou este comando, é porque você quer saber mais sobre mim. Logo abaixo está minhas informações gerais! E caso você gostar de mim, me ajude dando um upvote e adicionando-me em seu servidor!",
-        "seeCommands": "Veja meus comandos:",
-        "creator": "Criador:",
-        "prefix": "Prefixo:",
-        "developedIn": "Desenvolvido em:",
-        "connectedWith": "Conectado a",
-        "uptime": "Acordado a",
-        "botInvite": "Adicione-me a seu servidor",
-        "supportInvite": "Meu servidor de suporte",
-        "mentions": "🏅 Menções Honrosas",
-        "mentionsDiogo": "`🔥ImDiogo912🔥#8687` Se não fosse por ele, eu nem iria existir!"
+        "banned": "{{author}} baniu com sucesso o membro {{member}}"
     },
     "calc": {
         "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",
@@ -32,49 +19,16 @@
     "clear": {
         "correctUsage": "O número de mensagens para eu deletar deverá ser entre 2 e 100!"
     },
-    "config": {
-        "counter": "Contador definido no canal <#{{channel}}>",
-        "counterTopic": "Temos um total de: ${slots(message.guild.memberCount)} Membros",
-        "noArgs": "Qual será o canal?",
-        "welcome": "Mensagens de boas-vindas definidas no canal <#{{channel}}>",
-        "leave": "Mensagens de saída definidas no canal <#{{channel}}>",
-        "newDB": "Use o comando novamente!"
-    },
     "daily": {
-        "coinLastTime": "Parece que você já pegou seus Smiles diários hoje!",
-        "daily": "Você pegou 350 Smiles hoje!"
-    },
-    "docs": {
-        "noFound": "o documento **{{doc}}** não foi encontrado. Tente **novamente**."
+        "dailyLastTime": "Você já pegou seus Smiles diários hoje, espere para pegar novamente",
+        "daily": "Você pegou 350 Smiles diários!"
     },
     "esay": {
-        "writedBy": "Anunciado por: {{author}}",
-        "message": "Anúncio: {{sayMessage}}"
+        "noArgs": "Digite algo para eu mandar!"
     },
     "fakemsg": {
-        "noArgs": "{{author}} **mencione um usuário**",
-        "noMessage": "{{author}} você precisa dizer algo!"
-    },
-    "hug": {
-        "noMention": "{{author}} abraçou-se a si mesmo...!",
-        "yesMention": "{{author}} deu um abraço a {{message.mentions.members.first().user.username}}. <a:Cat_hug:573232582075088916>"
-    },
-    "isitup": {
-        "up": "O website está online.",
-        "isDown": "Humm... Parece que este website está off.",
-        "details": "Demorou **{{body.response_time}}ms** para **{{body.response_ip}}** responder com o código HTTP **{{body.response_code}}**.",
-        "noWebsite": "You have to give me a website to check!"
-      },
-    "kick": {
-        "notFound": "Esse usuário não está aqui.",
-        "noBannable": "Eu não posso punir este usuário, meu cargo é menor que o do usuário a ser punido!",
-        "noReason": "Sem motivo.",
-        "kicked": "expulsou o {{member}} com o motivo: {{reason}}! <:vary_kick:589153392451125248>"
-    },
-    "kiss": {
-        "noMention": "**Mencione em quem você quer dar um beijo.**",
-        "youMention": "**Você não pode se beijar.**",
-        "kiss": ":kissing_heart: {{author}} deu um beijo em {{message.mentions.members.first().user.username}}"
+        "noArgs": "**Você precisa dizer algo.**",
+        "noMention": "**Mencione um usuário!**"
     },
     "play": {
         "playingNow": "Tocando agora: `{{track}}`",
@@ -83,5 +37,9 @@
     },
     "uptime": {
         "uptime": "Estou online há {{uptime}}"
+    },
+    "lang": {
+        "choose": "🌎 Escolha uma linguagem",
+        "translatedby": "Traduzido por: {{translator}}"
     }
 }

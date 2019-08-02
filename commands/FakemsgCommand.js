@@ -6,10 +6,10 @@ if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.reply(t("
 
   let botmessage = args.slice(1).join(' ')
 
-  if (args[0] == null) {return message.channel.send(`${message.author}, <:discordpoop:510767850437214208> **Mencione um usuário !**`)}
+  if (args[0] == null) {return message.reply(t("commands:fakemsg.noMention"))}
 
 
-    if (args[1] == null) {return message.channel.send(`${message.author}, <:discordpoop:510767850437214208> **Diga algo !**`)}
+    if (args[1] == null) {return message.reply(t("commands:fakemsg.noArgs"))}
     message.channel.createWebhook(user.username, user.avatarURL).then(w => {
         w.send(botmessage);
         w.delete();
@@ -19,6 +19,6 @@ if (!message.guild.me.hasPermission("MANAGE_WEBHOOKS")) return message.reply(t("
 
 exports.config = {
     name: 'fakemsg',
-    aliases: ['trollmsg'],
+    aliases: [],
     category: 'random'
 }

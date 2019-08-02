@@ -4,7 +4,7 @@ exports.run = async ({vary, message, args}, t) => {
 if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply(t("errors:missingOnePermission", {permission: 'Administrador'}))
 if (!message.guild.me.hasPermission("ADMINISTRATOR")) return message.reply(t("errors:botMissingOnePermission", {permission: 'Administrador'}))
 
-  if (args[0] == null) {return message.channel.send(`Digite algo para eu mandar!`)}
+  if (args[0] == null) {return message.channel.send(t("commands:esay.noArgs"))}
  
   const sayMessage = args.join(" ");
 
@@ -17,7 +17,6 @@ if (!message.guild.me.hasPermission("ADMINISTRATOR")) return message.reply(t("er
   .addField("Anúncio: \n", `${sayMessage}`)
   .setTimestamp();
 
-  const esayMessage = args.join(" ");
   message.delete().catch(O_o=>{});
 
   message.channel.send('@everyone')

@@ -11,7 +11,6 @@ const Users = new Schema({
 userID: String,
 Smiles: {type: Number, default: 0},
 Doador: {type: Boolean, default: false},
-// Donate: {type: Number, default: 0},
 Ban: {type: Boolean, default: false},
 CasadoCom: {type: Array, default: []},
 Casado: {type: Boolean, default: false},
@@ -22,7 +21,6 @@ Suporte: {type: Boolean, default: false},
 Reps: {type: Number, default: 0},
 RepLastTime: {type: String, default: '0000'},
 coinsLastTime: {type: String, default: '0000'},
-// Keys: {type: Number, default: 0}
 });
 
 const Guilds = new Schema({

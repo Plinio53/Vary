@@ -32,7 +32,7 @@ module.exports = async (vary, message, args, member) => {
                     if (server) {
                         if(server.AntiInvite){
                             if(message.content.includes("discord.gg/") && !message.member.hasPermission('ADMINISTRATOR')) {
-                                    message.delete().then(() => message.reply(t("errors.antiDiv")))                              
+                                    message.delete().then(() => message.reply(t("errors:antiDiv")))                              
                                 
                             };
                         }
@@ -46,7 +46,7 @@ module.exports = async (vary, message, args, member) => {
                             setFixedT(i18next.getFixedT(language))
                             return new Promise(async (resolve, reject) => {
                                 i18next.use(translationBackend).init({
-                                    ns: ['commands', 'categories', 'errors', 'permissions'],
+                                    ns: ['commands', 'categories', 'errors', 'permissions', 'languages'],
                                     preload: await fs.readdirSync("./locales/"),
                                     fallbackLng: 'pt-BR',
                                     backend: {
@@ -65,7 +65,7 @@ module.exports = async (vary, message, args, member) => {
                                             if(!usuario.Ban || usuario.Criador) {
                                                 comando.run({vary, message, args}, t);
                                             } else {
-                                                message.channel.send(t(errors.botban))
+                                                message.channel.send(t("errors:botban"))
                                             }            
                                         }
                                     }
