@@ -25,9 +25,10 @@ if(!reason) reason = "";
         .addField("📑 | Motivo", reason)
         .setTimestamp(new Date())
 
-  await member.ban(reason)
+ // await member.ban(reason)
+  message.guild.ban(member.id, {days: 7, reason: `Banido por: ${message.author.tag} - Motivo: ${reason}`})
   .catch(error => message.channel.send(t("errors:generic", {error: error})));
-  message.channel.send(t("commands:ban.banned", {author: message.author.username}, {member: member}))
+  message.channel.send(t("commands:ban.banned", {author: message.author}))
 channel.send(banembed);
 }
 

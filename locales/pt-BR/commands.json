@@ -4,7 +4,10 @@
         "correctUsage": "Use: `v;addemoji <link do emoji> <nome do emoji>"
     },
     "ban": {
-        "banned": "{{author}} baniu com sucesso o membro {{member}}"
+        "banned": "{{author}}, usuário banido com sucesso!"
+    },
+    "unban": {
+        "unbanned": "{{author}}, usuário desbanido com sucesso!"
     },
     "calc": {
         "noArgs": "__Você precisa de dizer uma conta matemática para eu efetuar!__",
