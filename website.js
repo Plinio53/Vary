@@ -78,8 +78,8 @@ app.get("/login",async function (req, res) {
 })
 
 app.get("/donate",function(req, res){
-//    res.redirect("https://patreon.com/join/itsdiogo912")
-    res.render("donate.ejs")
+    res.redirect("https://patreon.com/join/itsdiogo912")
+//    res.render("donate.ejs")
  })
 
 app.get("/tos",function(req, res){
