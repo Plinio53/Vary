@@ -8,7 +8,7 @@ exports.run = async ({vary, message, args}, t) => {
 
 const promises = [
     vary.shard.fetchClientValues('guilds.size'),
-    vary.shard.broadcastEval('vary.guilds.reduce((prev, guild) => prev + guild.memberCount, 0)'),
+    vary.shard.broadcastEval('this.guilds.reduce((prev, guild) => prev + guild.memberCount, 0)'),
 ];
 
 return Promise.all(promises)
