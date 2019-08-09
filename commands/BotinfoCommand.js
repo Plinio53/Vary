@@ -10,8 +10,8 @@ exports.run = async ({vary, message, args}, t) => {
 /* const users = await vary.ShardUtils.getMembersSize();
 const guilds = await vary.shard.broadcastEval('vary.guilds.size').then(res => res.reduce((a, b) => a + b, 0)); */
 const promises = [
-    client.shard.fetchClientValues('guilds.size'),
-    client.shard.broadcastEval('vary.guilds.reduce((prev, guild) => prev + guild.memberCount, 0)'),
+    vary.shard.fetchClientValues('guilds.size'),
+    vary.shard.broadcastEval('vary.guilds.reduce((prev, guild) => prev + guild.memberCount, 0)'),
 ];
 
 return Promise.all(promises)
