@@ -5,12 +5,7 @@ const vary = new Discord.Client({
   disableEveryone: true,
   autoReconnect: true
 });
-const website = require("./website.js");
 const db = require('./database.js');
-const express = require('express');
-const http = require('http');
-const app = express();
-const server = http.createServer(app);
 
 vary.calls = new Discord.Collection()
 vary.queue = new Discord.Collection()
