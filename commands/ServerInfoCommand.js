@@ -1,14 +1,7 @@
 const Discord = require("discord.js");
 
 exports.run = async ({vary, message, args}, t) => {
-/*
-var emojis;
-if (message.guild.emojis.size === 0) {
-emojis = 'Nenhum';
-} else {
-emojis = message.channel.guild.emojis.map(e => e).join(" ");
-}
-*/
+let sicon = message.guild.iconURL
 let online = message.guild.members.filter(member => member.user.presence.status !== 'offline');
 let day = message.guild.createdAt.getDate()
 let month = 1 + message.guild.createdAt.getMonth()
@@ -27,7 +20,6 @@ let serverembed = new Discord.RichEmbed()
 .addField("🙋 Humanos", message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size, true)
 .addField("<:Blobbot:575059789848248340> Bots", message.guild.members.filter(m => m.user.bot).size, true)
 .addField("<:online:601044843736727600> Online", online.size, true)
-// .addField("Emojis", emojis, true)
 .addField("💼 Cargos", message.guild.roles.size, true);
  message.channel.send(serverembed);
 

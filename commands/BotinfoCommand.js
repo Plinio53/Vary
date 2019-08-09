@@ -6,9 +6,6 @@ require("moment-duration-format")
 
 exports.run = async ({vary, message, args}, t) => {
 
-
-/* const users = await vary.ShardUtils.getMembersSize();
-const guilds = await vary.shard.broadcastEval('vary.guilds.size').then(res => res.reduce((a, b) => a + b, 0)); */
 const promises = [
     vary.shard.fetchClientValues('guilds.size'),
     vary.shard.broadcastEval('vary.guilds.reduce((prev, guild) => prev + guild.memberCount, 0)'),
@@ -17,7 +14,7 @@ const promises = [
 return Promise.all(promises)
     .then(results => {
         const totalGuilds = results[0].reduce((prev, guildCount) => prev + guildCount, 0);
-        const totalMembers = results[1].reduce((prev, memberCount) => prev + memberCount, 0);
+        const totalMembers = results[1].reduce((prev, memberCount) => prev + memberCount, 0); 
 const duration = moment.duration(vary.uptime).format('D [d], H [h], m [m], s [s]');
 let embedinfo = new Discord.RichEmbed()
 .setColor('#7289DA')
@@ -28,7 +25,7 @@ let embedinfo = new Discord.RichEmbed()
 .addField('**<:coroinha:519546425080807434> Criador:**', '<@375627393773207554>', true)
 .addField('**<:FyKeyword:554113735724367882> Prefixo ativo:**', `v;`, true)
 .addField('**<:FyNodeJs:558702151598080000> Desenvolvido em:**', 'Discord.js - _v_ **_11.4.2_**', true)
-.addField("**<a:vary_happy:560869540561551370> Estou conectado a:**", ` **<:FyNetworkGroup:552286317333970956> ${totalMembers}** usuários\n **<:guild:521125042982223874> ${totalGuilds}** servidores`, true)
+.addField("**<a:vary_happy:560869540561551370> Estou conectado a:**", ` **<:FyNetworkGroup:552286317333970956> ${totalMembers}** usuários\n **<:guild:521125042982223874> ${totalGuilds}** servidores `, true)
 .addField("**<:vary_coberto:561295282613125150> Estou acordado a:**", `${duration}`, true)
 .addField('**<:notlikevary_2:552799726618279966> Adicione-me em seu servidor:**', '[Clique aqui](https://discordapp.com/api/oauth2/authorize?client_id=546490972901605386&permissions=8&scope=bot)', true)
 .addField('**<:FyLink:556600524032704532> Meu servidor de suporte:**', '[Clique aqui](https://discord.gg/VBfjn35)', true)
