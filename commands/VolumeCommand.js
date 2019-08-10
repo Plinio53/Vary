@@ -3,7 +3,7 @@ const database = require("../database.js")
 
 exports.run = ({vary, message, args}, t) => {
     database.Guilds.findOne({
-        "userID": message.author.id
+        "_id": message.guild.id
     }, function(error, server) {
         if(server.Doador) {
             if (vary.lavalinkManager.manager.has(message.guild.id)) {
