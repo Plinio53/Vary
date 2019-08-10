@@ -2,10 +2,10 @@ const Discord = require("discord.js")
 const database = require("../database.js")
 
 exports.run = ({vary, message, args}, t) => {
-    database.Users.findOne({
+    database.Guilds.findOne({
         "userID": message.author.id
-    }, function(error, usuario) {
-        if(usuario.Doador) {
+    }, function(error, server) {
+        if(server.Doador) {
             if (vary.lavalinkManager.manager.has(message.guild.id)) {
             let val = args[0]
                 vary.calls.get(message.guild.id).player.volume(val)
