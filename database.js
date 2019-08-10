@@ -44,7 +44,7 @@ AutoRoleID: {type: String, default: "Nenhum"},
 
 const Keys = new Schema({
 id: String,
-Used: {type: Boolean, default: false},
+Usada: {type: Boolean, default: false},
 })
 
 var UsersDB = mongoose.model('Users', Users);
