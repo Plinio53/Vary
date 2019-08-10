@@ -33,6 +33,7 @@ LeaveChannel: {type: String, default: "Nenhum"},
 Partner: {type: Boolean, default: false},
 Principal: {type: Boolean, default: false},
 Suggests: {type: Boolean, default: false},
+Key: {type: Boolean, default: false},
 ChatSuggests: {type: String, default: 'Nenhum'},
 Contador: {type: Boolean, default: false},
 ChatContador: {type: String, default: 'Nenhum'},
@@ -44,8 +45,6 @@ AutoRoleID: {type: String, default: "Nenhum"},
 const Keys = new Schema({
 id: String,
 Used: {type: Boolean, default: false},
-UsedOn: String,
-userID: String,
 })
 
 var UsersDB = mongoose.model('Users', Users);
