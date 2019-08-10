@@ -5,7 +5,7 @@ exports.run = ({vary, message, args}, t) => {
     database.Guilds.findOne({
         "_id": message.guild.id
     }, function(error, server) {
-        if(server.Doador) {
+        if(server.Key) {
             if (vary.lavalinkManager.manager.has(message.guild.id)) {
             let val = args[0]
                 vary.calls.get(message.guild.id).player.volume(val)
