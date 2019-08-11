@@ -30,10 +30,6 @@ exports.run = ({ message, args }, t) => {
 
                       if (parseInt(args[1]) >= 1) {
                         if (apostou.Smiles >= quantidade && recebeu.Smiles >= quantidade) {
-                          coldown.add(message.author.id)
-                          setTimeout(function () {
-                            coldown.delete(message.author.id)
-                          }, 60 * 1000)
 
                           usuario1.unshift(apostador + message.channel.id)
                           usuario2.unshift(apostador2 + message.channel.id)
