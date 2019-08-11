@@ -15,9 +15,9 @@ exports.run = ({ vary, message, args }, t) => {
         documento.Smiles += valor
         documento.DailyLastTime = Date.now()
         documento.save()
-        message.channel.send(t("comandos:daily.collectedMoney", { smiles: valor }))
+        message.channel.send(t("commands:daily.collectedMoney", { smiles: valor }))
       } else {
-        message.channel.send(t("comandos:daily.alreadyGiven", { time: tempo }))
+        message.channel.send(t("commands:daily.alreadyGiven", { time: tempo }))
       } 
     } else {
        message.channel.send("Ocorreu um erro ao executar o comando...")
