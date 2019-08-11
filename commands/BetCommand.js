@@ -2,7 +2,7 @@ var usuario1 = []
 var usuario2 = []
 var database = require('../database.js')
 
-exports.run = ({ vary, message, args }, t) => {
+exports.run = ({ undefind, message, args }, t) => {
   let razaod = args.slice(1).join(' ')
   let apostador = message.author.id
   let apostador2 = Math.round(Math.random() * 1)
