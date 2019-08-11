@@ -18,6 +18,7 @@ Partner: {type: Boolean, default: false},
 Reps: {type: Number, default: 0},
 RepLastTime: {type: String, default: '0000'},
 DailyLastTime: {type: String, default: '0000'},
+Caixas: {type: Number, default: 0}
 });
 
 const Guilds = new Schema({
