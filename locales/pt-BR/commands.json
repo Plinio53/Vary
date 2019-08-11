@@ -23,8 +23,8 @@
         "correctUsage": "O número de mensagens para eu deletar deverá ser entre 2 e 100!"
     },
     "daily": {
-        "dailyLastTime": "Você já pegou seus Smiles diários hoje, espere para pegar novamente",
-        "daily": "Você pegou 350 Smiles diários!"
+        "alreadyGiven": "💸 | Você pode coletar seus **smiles** diários denovo daqui a: **{{time}}**",
+        "collectedMoney": "💰 Você coletou **{{smiles}}** smiles!"
     },
     "esay": {
         "noArgs": "Digite algo para eu mandar!"
