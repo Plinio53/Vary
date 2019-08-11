@@ -3,6 +3,23 @@
         "sucess": "Emoji criado com sucesso!",
         "correctUsage": "Use: `v;addemoji <link do emoji> <nome do emoji>"
     },
+    "apostar": {
+        "betFinish": ":moneybag: | **Parabéns** ,<@{{vencedor}}>, você ganhou **{{coins}}** moedas.",
+        "betDeclined": "**Pedido** de aposta **recusado**.",
+        "accept": "Aceitar",
+        "decline": "Recusar",
+        "receivedOrder": ":money_with_wings: | <@{{apostador2}}> recebeu um **PEDIDO DE APOSTA** de <@{{apostador}}> no valor de **{{coins}}** moedas.\n**Responder com:** `aceitar` ou `recusar`.",
+        "timeout": "Seu **tempo acabou**.",
+        "insufficientMoney": "**Você** ou o **usuário** mencionado **não possuem** essa quantia de **dinheiro**.",
+        "underZero": "O **valor** da aposta não pode ser **abaixo de 0**.",
+        "noArgs": "**Me diga** o **quanto** você quer **apostar**.",
+        "cooldown": "**Por favor**, aguarde **1 minuto** para enviar outra **solicitação de aposta**.",
+        "memberAlreadyRequested": "Este usuário **já recebeu** uma **solicitação de aposta**.",
+        "requestAlreadyReceived": "**Você já recebeu** uma **solicitação de aposta**.",
+        "youAlreadyRequested": "**Você já** fez uma **solicitação de aposta**.",
+        "noMention": "**Diga** com quem **você** deseja fazer uma **aposta**.",
+        "errorOccurred": "**Ocorreu** um **erro** ao **executar** este comando."
+    },
     "ban": {
         "banned": "{{author}}, usuário banido com sucesso!"
     },
