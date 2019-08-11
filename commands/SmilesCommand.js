@@ -20,6 +20,6 @@ message.channel.send(`<@${member.id}> possui ${user.Smiles} Smiles em sua conta!
 
 exports.config = {
     name: 'smiles',
-    aliases: ['money', 'saldo'],
+    aliases: ['money', 'saldo', 'coins'],
     category: 'economy'
 }
