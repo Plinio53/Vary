@@ -5,11 +5,11 @@ var database = require('../database.js')
 exports.run = ({ vary, message, args }, t) => {
   let razaod = args.slice(1).join(' ')
   let apostador = message.author.id
-  let apostador2
-  var quantidade
-  var vencedor
-  var perdedor
-  var random = Math.round(Math.random() * 1)
+  let apostador2 = Math.round(Math.random() * 1)
+  let quantidade = Math.round(Math.random() * 1)
+  let vencedor = Math.round(Math.random() * 1)
+  let perdedor = Math.round(Math.random() * 1)
+  let random = Math.round(Math.random() * 1)
 
   if (message.mentions.users.size > 0) {
     apostador2 = message.mentions.users.first().id
