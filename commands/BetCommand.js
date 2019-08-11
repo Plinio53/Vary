@@ -101,3 +101,9 @@ exports.run = ({ message, args }, t) => {
     message.channel.sendMessage(t('commands:apostar.noMention'))
   }
 }
+
+exports.config = {
+    name: 'bet',
+    aliases: ['apostar'],
+    category: 'economy'
+}
