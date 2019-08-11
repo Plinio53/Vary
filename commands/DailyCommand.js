@@ -13,7 +13,7 @@ exports.run = ({ vary, message, args }, t) => {
       var tempo = moment.duration.format([moment.duration((parseInt(documento.DailyLastTime) + 86400000) - Date.now())], 'hh:mm:ss')
 
       if ((parseInt(documento.DailyLastTime) + 86400000) <= (Date.now())) {
-        documento.Smiles = documento.Smiles + valor // += valor
+        documento.Smiles += valor //documento.Smiles + valor
         documento.DailyLastTime = Date.now()
         documento.save()
         message.channel.send(t('comandos:daily.collectedMoney', { smiles: valor }))
