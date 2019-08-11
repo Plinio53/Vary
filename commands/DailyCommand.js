@@ -21,7 +21,7 @@ exports.run = ({ vary, message, args }, t) => {
         message.channel.send(t('comandos:daily.alreadyGiven', { time: tempo }))
       }
     } else {
-       message.channel.send(t("errors:generic", {error: error}))
+       message.channel.send("Ocorreu um erro ao executar o comando...")
     }
   })
 }
