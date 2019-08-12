@@ -35,9 +35,9 @@ module.exports = async (vary, member) => {
 
          database.Guilds.findOne({ _id: member.guild.id }, function (error, servidor) {
         if(servidor){
-            if(servidor.Contador){
+/*            if(servidor.Contador){
                 member.guild.channels.get(servidor.ChatContador).setTopic(`Temos um total de: ${slots(member.guild.memberCount)} Membros`)
-            } else {}
+            } else {} */
         if(servidor.Welcome){
                 if(member.guild.channels.get(servidor.WelcomeChannel)){
                     member.guild.channels.get(servidor.WelcomeChannel).send(embed).catch(err => {

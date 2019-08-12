@@ -15,10 +15,11 @@ Designer: {type: Boolean, default: false},
 Ban: {type: Boolean, default: false},
 Equipe: {type: Boolean, default: false},
 Partner: {type: Boolean, default: false},
+VIP: {type: Boolean, default: false},
 Reps: {type: Number, default: 0},
 RepLastTime: {type: String, default: '0000'},
 DailyLastTime: {type: String, default: '0000'},
-Caixas: {type: Number, default: 0}
+Caixas: {type: Array, default: []}
 });
 
 const Guilds = new Schema({
